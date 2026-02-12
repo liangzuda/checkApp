@@ -537,16 +537,7 @@ interface remarkType {
 }
 
 // 主备注
-export const mainRemarkInitData: remarkType[] = [
-  {
-    content: '不得在推力大于怠速时操作',
-    updateTime: '2026/01/12 09:12:00Z',
-  },
-  {
-    content: '执行前完成口头确认',
-    updateTime: '2026/01/10 11:40:00Z',
-  },
-]
+export const mainRemarkInitData: remarkType[] = []
 
 // 飞行阶段检查项
 export const flightPhaseCheckItemInitData = [

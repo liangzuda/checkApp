@@ -29,7 +29,7 @@ const routeCacheStore = useRouteCacheStore()
 
 const keepAliveRouteNames = computed(() => {
   return routeCacheStore.routeCaches.filter(
-    name => !['check', 'history'].includes(name)
+    name => !['check', 'history'].includes(name),
   )
 })
 
@@ -40,11 +40,11 @@ const mode = computed(() => {
 onMounted(() => {
   let startY = 0
 
-  const start = e => {
+  const start = (e) => {
     startY = e.touches[0].pageY
   }
 
-  const move = e => {
+  const move = (e) => {
     const y = e.touches[0].pageY
     const scrollTop = document.documentElement.scrollTop
 

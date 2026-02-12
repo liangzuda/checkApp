@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "6.7.3",
+    "@capacitor/assets": "^3.0.5",
     "@commitlint/cli": "^20.3.0",
     "@commitlint/config-conventional": "^20.3.0",
     "@commitlint/types": "^20.2.0",

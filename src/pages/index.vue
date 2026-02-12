@@ -129,28 +129,33 @@ function handleRemoveCheckList(id: number) {
   background-color: #f5f5f550;
   height: 100%;
 
+  /* 顶部导航栏 */
   .nav-bar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
-    height: 50px;
+    height: calc(50px + var(--safe-top));
+    padding-top: var(--safe-top);
     line-height: 50px;
     background-color: #fff;
   }
 
+  /* tab栏 */
   .tabList {
     position: fixed;
-    top: 55px;
+    top: calc(50px + var(--safe-top));
     left: 0;
     right: 0;
     z-index: 999;
     height: 50px;
+    background-color: #fff;
   }
 
+  /* 占位高度 = nav-bar + tabList */
   .placeholder {
-    height: 105px;
+    height: calc(100px + var(--safe-top));
     margin-bottom: 10px;
   }
 }

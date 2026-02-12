@@ -10,6 +10,10 @@ dayjs.extend(utc)
 const route = useRoute()
 const router = useRouter()
 
+function getSafeHeight() {
+  return window.visualViewport?.height || window.innerHeight
+}
+
 // 防抖
 function debounce(fn, delay = 500) {
   let timer = null
@@ -106,7 +110,7 @@ function handleSyncCheckList() {
     }
     localStorage.setItem('checkListData', JSON.stringify(checkListData))
     // 前往历史记录页面
-    router.push('/history')
+    router.push('/')
   })
 }
 
@@ -429,7 +433,7 @@ function handleCancelLongPressDialog() {
 
 // 备注
 const remarkHeight = ref(0)
-const remarkAnchors = [0, 100, 150, window.innerHeight * 0.6]
+const remarkAnchors = [0, 100, 150, getSafeHeight() * 0.6]
 const remarkInput = ref(null)
 const remarkList = ref(null)
 const tempReferenceItem = ref(null)
@@ -449,14 +453,15 @@ function handleOpenRemark(subItem?) {
     tempReferenceItem.value = null
   }
 
-  remarkHeight.value = window.innerHeight * 0.5
+  remarkHeight.value = getSafeHeight() * 0.4
 
   if (onlyRead)
     return
 
   // 获得输入框焦点
-  // setTimeout(() => remarkInput.value?.focus(), 50)
-  remarkInput.value?.focus()
+  setTimeout(() => {
+    remarkInput.value?.focus()
+  }, 50)
 }
 
 function heightChange(e) {
@@ -477,7 +482,7 @@ function handleSaveRemark() {
 
   if (tempRemark.value?.length) {
     // UTC标准时间，使用dayjs
-    const dateTime = `${dayjs().utc().format('YYYY/MM/DD HH:mm:ss')}Z`
+    const dateTime = dayjs().utc().toISOString()
     const newRemark = {
       content: tempRemark.value,
       // 当前时间
@@ -795,7 +800,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
                       <div class="w-60% text-nowrap text-ellipsis overflow-hidden" :title="subItem.remarks[0].content">
                         {{ subItem.remarks[0].content }}
                       </div>
-                      <div>{{ dayjs(subItem.remarks[0].updateTime).utc().format('HH:mm:ss') }}Z</div>
+                      <div>{{ dayjs(subItem.remarks[0].updateTime).utc().format('HH:mm:ss[Z]') }}</div>
                     </div>
                   </div>
                   <template #right>
@@ -894,7 +899,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
           <div class="font-size-14px p-2 rounded-[10px] bg-[#fff] shadow-[0_0_10px_rgba(0,0,0,0.1)]">
             <div class="flex items-center justify-between">
               <div class="c-[#999]">
-                {{ item.updateTime }}
+                {{ dayjs(item.updateTime).utc().format('YYYY/MM/DD HH:mm:ss[Z]') }}
               </div>
               <div v-if="!onlyRead" @click="handleRemoveRemark(item)">
                 <van-icon size="14" name="close" />
@@ -1251,7 +1256,8 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
       justify-content: space-between;
       align-items: center;
       padding: 0 10px;
-      height: 50px;
+      height: calc(50px + var(--safe-top));
+      padding-top: var(--safe-top);
       background-color: #fff;
 
       .operation {
@@ -1264,7 +1270,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
   }
 
   .placeholder {
-    height: 50px;
+    height: calc(50px + var(--safe-top));
   }
 
   .flight-info {
