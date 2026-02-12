@@ -8,7 +8,7 @@ const { t } = useI18n()
 // Show or hide navbar
 // If route name is Check or History, hide navbar
 const showNavBar = computed(() => {
-  const unShowRouteName = ['Check', 'History']
+  const unShowRouteName = ['Home', 'Check', 'History']
   if (route.name && unShowRouteName.includes(route.name)) {
     return false
   }

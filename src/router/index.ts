@@ -14,13 +14,7 @@ NProgress.configure({ showSpinner: true, parent: '#app' })
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_APP_PUBLIC_PATH),
-  routes: [
-    {
-      path: '/',
-      redirect: '/history',
-    },
-    ...routes,
-  ],
+  routes,
 })
 
 // This will update routes at runtime without reloading the page

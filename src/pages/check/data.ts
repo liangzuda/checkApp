@@ -7,7 +7,7 @@ const programExecutionInitData = [
       { name: 'PM调频完成后双方未证实', triggerCount: 0 },
       { name: 'PM预调除离场频率以外的频率', triggerCount: 0 },
       { name: 'PM未完整复诵ATC指令', triggerCount: 0 },
-    ]
+    ],
   },
   {
     name: 'ATC指令执行',
@@ -23,7 +23,7 @@ const programExecutionInitData = [
       { name: 'PM未执行1000FT到改平喊话', triggerCount: 0 },
       { name: 'ATC通信过程中受到CABIN干扰', triggerCount: 0 },
       { name: '标准喊话缺失/不准确', triggerCount: 0 },
-    ]
+    ],
   },
   {
     name: 'FMS修改',
@@ -31,7 +31,7 @@ const programExecutionInitData = [
       { name: '任一机组未经互相证实便直接执行MCDU更改', triggerCount: 0 },
       { name: 'PF和PM同时执行MCDU修改输入', triggerCount: 0 },
       { name: 'PF在关键阶段操作MCDU', triggerCount: 0 },
-    ]
+    ],
   },
 ]
 
@@ -559,7 +559,11 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '能见度/云高', code: 'SCK01', status: 1, updateTime: '', remarks: [],
+            content: '能见度/云高',
+            code: 'SCK01',
+            status: 1,
+            updateTime: '',
+            remarks: [],
             referenceItem: {
               inputs: [
                 {
@@ -567,48 +571,51 @@ export const flightPhaseCheckItemInitData = [
                   fields: [
                     {
                       type: 'text',
-                      value: '能见度'
+                      value: '能见度',
                     },
                     {
                       type: 'input',
                       key: 'visibility',
                       unit: 'KM',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '云高'
+                      value: '云高',
                     },
                     {
                       type: 'input',
                       key: 'cloudHeight',
                       unit: 'FT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0002',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0003',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0004',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '风', status: 1, updateTime: '', remarks: [],
+            content: '风',
+            status: 1,
+            updateTime: '',
+            remarks: [],
             referenceItem: {
               inputs: [
                 {
@@ -616,126 +623,141 @@ export const flightPhaseCheckItemInitData = [
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '降水', status: 1, updateTime: '', remarks: [],
+            content: '降水',
+            status: 1,
+            updateTime: '',
+            remarks: [],
             referenceItem: {
               inputs: [],
               checkbox: {
                 list: [
                   {
                     code: 'R0009',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0010',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0011',
-                    text: '油量评估'
+                    text: '油量评估',
                   },
                   {
                     code: 'R0012',
-                    text: '性能评估'
-                  }
+                    text: '性能评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '雷雨', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '雷雨',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [
                   {
                     code: 'R0013',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0014',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0015',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '沙尘', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '沙尘',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [
                   {
                     code: 'R0016',
-                    text: '沙尘补充程序'
+                    text: '沙尘补充程序',
                   },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '气温', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '气温',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [
                   {
                     code: 'R0017',
-                    text: '高低温补充程序'
+                    text: '高低温补充程序',
                   },
                   {
                     code: 'R0018',
-                    text: '性能评估'
+                    text: '性能评估',
                   },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -744,46 +766,58 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '雷雨', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '雷雨',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [
                   {
                     code: 'R0019',
-                    text: '航路影响评估'
+                    text: '航路影响评估',
                   },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '火山灰', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '火山灰',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [
                   {
                     code: 'R0020',
-                    text: '航路影响评估'
+                    text: '航路影响评估',
                   },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '颠簸', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '颠簸',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [
                   {
                     code: 'R0021',
-                    text: '强度高度位置评估'
+                    text: '强度高度位置评估',
                   },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -792,102 +826,130 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '相关导航设施', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '相关导航设施',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [
                   {
                     code: 'R0022',
-                    text: '进近影响评估'
+                    text: '进近影响评估',
                   },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '相关跑道', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '相关跑道',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [
                   {
                     code: 'R0023',
-                    text: '关闭时段评估'
+                    text: '关闭时段评估',
                   },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '相关滑行道', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '相关滑行道',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
-                list: [                
+                list: [
                   {
                     code: 'R0024',
-                    text: '航图标注'
+                    text: '航图标注',
                   },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '相关航路', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '相关航路',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [
                   {
                     code: 'R0025',
-                    text: '航路标注'
+                    text: '航路标注',
                   },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '相关危险区禁区', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '相关危险区禁区',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [
                   {
                     code: 'R0025',
-                    text: '航图标注'
+                    text: '航图标注',
                   },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '相关障碍物', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '相关障碍物',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [
                   {
                     code: 'R0026',
-                    text: '性能控制'
+                    text: '性能控制',
                   },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '相关目视助航设施', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '相关目视助航设施',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [
                   {
                     code: 'R0027',
-                    text: '性能控制'
+                    text: '性能控制',
                   },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -896,31 +958,43 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: 'O项操作程序', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'O项操作程序',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'O项性能影响', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'O项性能影响',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'O项放行标准', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'O项放行标准',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [],
               checkbox: {
                 list: [],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -929,307 +1003,335 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '生成时间', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '生成时间',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0032',
                   fields: [
                     {
                       type: 'text',
-                      value: '与实际离场时间差异'
+                      value: '与实际离场时间差异',
                     },
                     {
                       type: 'input',
                       key: 'hour',
                       unit: '小时',
-                      value: ''
+                      value: '',
                     },
-                  ]
-                }
+                  ],
+                },
               ],
               checkbox: {
                 list: [],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '高度层油量调整', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '高度层油量调整',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: 'OFP调整'
+                      value: 'OFP调整',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
-                      unit: '',
-                      value: 'KG'
+                      unit: 'KG',
+                      value: '',
                     },
-                  ]
-                }
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '备降场', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '备降场',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '备降油量调整', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '备降油量调整',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '偏航绕飞油量', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '偏航绕飞油量',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '额外油', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '额外油',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '起降重量限制', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '起降重量限制',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -1238,292 +1340,316 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '证件资料检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '证件资料检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '过短的滑行/飞行时间', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '过短的滑行/飞行时间',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '恶劣天气及颠簸位置', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '恶劣天气及颠簸位置',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '驾驶舱进出程序', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '驾驶舱进出程序',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '正常及应急联络程序', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '正常及应急联络程序',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '安保预案', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '安保预案',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -1541,244 +1667,264 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '绕机检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '绕机检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '油量加注', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '油量加注',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '载客加油程序', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '载客加油程序',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '销套核查（首个航段）', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '销套核查（首个航段）',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'TLB检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'TLB检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -1787,244 +1933,264 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '顶板及系统状态检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '顶板及系统状态检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'NDB（Navigation Data Base）生效日期检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'NDB（Navigation Data Base）生效日期检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMS性能衰减值检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS性能衰减值检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'IRS位置输入校准 交叉检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'IRS位置输入校准 交叉检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'RVSM 高度表75FT检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'RVSM 高度表75FT检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -2033,388 +2199,420 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '打开对应航图', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '打开对应航图',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '生效日期核对', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '生效日期核对',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '航路衔接点', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '航路衔接点',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '进离场代码', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '进离场代码',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '进离场航路点', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '进离场航路点',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '每一航段方位、距离', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '每一航段方位、距离',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '高度及速度限制', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '高度及速度限制',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'ANP值及原始导航频率', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'ANP值及原始导航频率',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -2423,196 +2621,212 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '打开OFP', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '打开OFP',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '按顺序检查航路点', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '按顺序检查航路点',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '逐一标注检查记号', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '逐一标注检查记号',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '航路及起降场进离场完整性', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '航路及起降场进离场完整性',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -2621,388 +2835,420 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '梯级巡航高度输入', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '梯级巡航高度输入',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'TROPO高度输入（A320）', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'TROPO高度输入（A320）',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'OFP重量输入', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'OFP重量输入',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '航路风温、下降风温输入', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '航路风温、下降风温输入',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'OPT高度 MAX高度 检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'OPT高度 MAX高度 检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMS与OFP TRIP TIME 交叉检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS与OFP TRIP TIME 交叉检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMS与OFP TRIP DIST 交叉检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS与OFP TRIP DIST 交叉检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMS与OFP LD FU 交叉检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS与OFP LD FU 交叉检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -3011,340 +3257,368 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '舱单标识', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '舱单标识',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '舱单干重', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '舱单干重',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '舱单数据', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '舱单数据',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '舱单ZFW输入FMS过程', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '舱单ZFW输入FMS过程',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '舱单ZFW输入FMS后', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '舱单ZFW输入FMS后',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '舱单TO MAC及配平值输入过程', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '舱单TO MAC及配平值输入过程',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '舱单LMC操作', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '舱单LMC操作',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -3353,628 +3627,680 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '性能软件版本检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '性能软件版本检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'ATIS天气条件更新', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'ATIS天气条件更新',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'GUST、VRB输入设置', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'GUST、VRB输入设置',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '污染跑道、风切变输入设置', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '污染跑道、风切变输入设置',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'GW及TOW区别确认', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'GW及TOW区别确认',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '舱单TO MEL/CDL项目输入', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '舱单TO MEL/CDL项目输入',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '交叉道口预设', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '交叉道口预设',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '双人独立计算', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '双人独立计算',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '计算结果交叉检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '计算结果交叉检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'STOP MARGIN中断余度评估', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'STOP MARGIN中断余度评估',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '加速收襟翼计划设置', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '加速收襟翼计划设置',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '减噪程序', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '减噪程序',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMS起飞数据输入准确性', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS起飞数据输入准确性',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -3983,484 +4309,524 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '起飞简令执行时机', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '起飞简令执行时机',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '特殊信息', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '特殊信息',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '预计滑行路线', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '预计滑行路线',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '起飞跑道数据', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '起飞跑道数据',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '离场程序', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '离场程序',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '限制', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '限制',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '航路', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '航路',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '起飞性能数据', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '起飞性能数据',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'V1前后非正常情况预案', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'V1前后非正常情况预案',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '其他需特殊说明的情况', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '其他需特殊说明的情况',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -4478,340 +4844,368 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: 'ATC推开指令确认', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'ATC推开指令确认',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '前轮转弯脱开确认', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '前轮转弯脱开确认',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '得到机务指令后松刹车', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '得到机务指令后松刹车',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '推出过程中双人双足均脱离刹车', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '推出过程中双人双足均脱离刹车',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '启动过程中双人双足均放置在刹车上', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '启动过程中双人双足均放置在刹车上',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '按程序执行除防冰及构型设置', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '按程序执行除防冰及构型设置',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '双人双侧确认机务及设备撤离', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '双人双侧确认机务及设备撤离',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -4820,484 +5214,524 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '滑出前执行滑行路线简令', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑出前执行滑行路线简令',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '滑出及转弯左右清洁喊话', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑出及转弯左右清洁喊话',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '滑行路线监控及喊话提示', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑行路线监控及喊话提示',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '滑行冲突威胁喊话提示', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑行冲突威胁喊话提示',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '滑行推力使用（320<40% N1; 787< 30% N1）', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑行推力使用（320<40% N1; 787< 30% N1）',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '滑行地速控制（直线<30KT；转弯<10KT；机坪<10KT）', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑行地速控制（直线<30KT；转弯<10KT；机坪<10KT）',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '滑行转弯打滑', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑行转弯打滑',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '主滑畅通时的刹车使用', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '主滑畅通时的刹车使用',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '刹车温度检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '刹车温度检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '最低起飞油量检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '最低起飞油量检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -5306,52 +5740,56 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '跑道及离场变更程序', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '跑道及离场变更程序',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -5369,436 +5807,472 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '得到CABIN READY后进入跑道', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '得到CABIN READY后进入跑道',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'TERRAIN及WX显示', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'TERRAIN及WX显示',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '跑道号确认', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '跑道号确认',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '环境威胁检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '环境威胁检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '起始推力设置', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '起始推力设置',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '目标起飞推力设定核实喊话', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '目标起飞推力设定核实喊话',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '灯光及扰流板解除预位操作', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '灯光及扰流板解除预位操作',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '低空速度限制', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '低空速度限制',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'MCT或TOGA非正常使用', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'MCT或TOGA非正常使用',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -5816,244 +6290,264 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: 'SID高度限制遵守', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'SID高度限制遵守',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'SID速度限制遵守', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'SID速度限制遵守',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '临近TRAFFIC的爬升率控制', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '临近TRAFFIC的爬升率控制',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '顶风顺风急流波动中', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '顶风顺风急流波动中',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '正确设置颠簸速度', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '正确设置颠簸速度',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -6062,388 +6556,420 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: 'ATC指令复诵完整性PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'ATC指令复诵完整性PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '指令内容核实PF', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '指令内容核实PF',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FCU/MCP数据输入及喊话 PF', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FCU/MCP数据输入及喊话 PF',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FCU/MCP/ FMA数据核实及喊话 PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FCU/MCP/ FMA数据核实及喊话 PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FCU/MCP飞行方式输入及喊话 PF', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FCU/MCP飞行方式输入及喊话 PF',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMA方式证实及喊话 PF/PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMA方式证实及喊话 PF/PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '1000FT到改平喊话 PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '1000FT到改平喊话 PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'ATC通信过程中CABIN干扰', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'ATC通信过程中CABIN干扰',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -6452,196 +6978,212 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: 'FMS修改喊话 CM1', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS修改喊话 CM1',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMS修改输入CM1', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS修改输入CM1',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMS执行/引入确认 CM1+CM2', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS执行/引入确认 CM1+CM2',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '执行/引入 CM1', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '执行/引入 CM1',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -6659,436 +7201,472 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '巡航高度选择', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '巡航高度选择',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '颠簸处置', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '颠簸处置',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '全程使用WX RADAR', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '全程使用WX RADAR',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '进入结冰环境前提前打开防冰开关', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '进入结冰环境前提前打开防冰开关',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '使用OFP监控时间油量进程', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '使用OFP监控时间油量进程',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '执行了释压飘降D简令', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '执行了释压飘降D简令',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '天气趋势监控', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '天气趋势监控',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'PF+PM同时脱离飞行状态监控', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'PF+PM同时脱离飞行状态监控',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '飞行关键阶段的非必要客舱呼叫', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '飞行关键阶段的非必要客舱呼叫',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -7097,340 +7675,368 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '进近准备执行时机', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '进近准备执行时机',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '进近简令执行时机', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '进近简令执行时机',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'ATC指挥飞机提前下降', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'ATC指挥飞机提前下降',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '获取VHF天气时执行了ATC通信守听程序', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '获取VHF天气时执行了ATC通信守听程序',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '配合STAR及APP航图进行了FMS进场及进近路线、高度速度限制检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '配合STAR及APP航图进行了FMS进场及进近路线、高度速度限制检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '机组独立执行了着陆性能计算并交叉检查', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '机组独立执行了着陆性能计算并交叉检查',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '制定了低温修正计划', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '制定了低温修正计划',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -7439,532 +8045,576 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '进近简令干扰', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '进近简令干扰',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '特殊信息', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '特殊信息',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '更新并说明了最新天气', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '更新并说明了最新天气',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '说明了预计着陆跑道', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '说明了预计着陆跑道',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'STAR', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'STAR',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '地形', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '地形',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '进近', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '进近',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '性能', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '性能',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '按图说明了预计的滑行路线', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '按图说明了预计的滑行路线',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '检查了备降或等待油量计划', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '检查了备降或等待油量计划',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '其他需特殊说明的情况', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '其他需特殊说明的情况',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -7973,388 +8623,420 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: 'ATC指令复诵完整性PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'ATC指令复诵完整性PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '指令内容核实PF', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '指令内容核实PF',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FCU/MCP数据输入及喊话 PF', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FCU/MCP数据输入及喊话 PF',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FCU/MCP/ FMA数据核实及喊话 PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FCU/MCP/ FMA数据核实及喊话 PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FCU/MCP飞行方式输入及喊话 PF', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FCU/MCP飞行方式输入及喊话 PF',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMA方式证实及喊话 PF/PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMA方式证实及喊话 PF/PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '1000FT到改平喊话 PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '1000FT到改平喊话 PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'ATC通信过程中CABIN干扰', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'ATC通信过程中CABIN干扰',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -8363,196 +9045,212 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: 'FMS修改喊话 CM1', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS修改喊话 CM1',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMS修改输入CM1', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS修改输入CM1',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMS执行/引入确认 CM1+CM2', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS执行/引入确认 CM1+CM2',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '执行/引入 CM1', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '执行/引入 CM1',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -8570,388 +9268,420 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '进近程序及跑道变更', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '进近程序及跑道变更',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '高度地形意识', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '高度地形意识',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '位置及原始导航监控', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '位置及原始导航监控',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '临近TRAFFIC的下降率控制', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '临近TRAFFIC的下降率控制',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '顶风顺风急流波动', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '顶风顺风急流波动',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '速度控制', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '速度控制',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '正确设置颠簸速度', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '正确设置颠簸速度',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '能量管理', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '能量管理',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -8960,388 +9690,420 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: 'ATC指令复诵完整性PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'ATC指令复诵完整性PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '指令内容核实PF', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '指令内容核实PF',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FCU/MCP数据输入及喊话 PF', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FCU/MCP数据输入及喊话 PF',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FCU/MCP/ FMA数据核实及喊话 PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FCU/MCP/ FMA数据核实及喊话 PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FCU/MCP飞行方式输入及喊话 PF', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FCU/MCP飞行方式输入及喊话 PF',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMA方式证实及喊话 PF/PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMA方式证实及喊话 PF/PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '1000FT到改平喊话 PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '1000FT到改平喊话 PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'ATC通信过程中CABIN干扰', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'ATC通信过程中CABIN干扰',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -9350,196 +10112,212 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: 'FMS修改喊话 CM1', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS修改喊话 CM1',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMS修改输入CM1', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS修改输入CM1',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMS执行/引入确认 CM1+CM2', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS执行/引入确认 CM1+CM2',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '执行/引入 CM1', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '执行/引入 CM1',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -9557,388 +10335,420 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '进近程序及跑道变更', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '进近程序及跑道变更',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'TERRAIN及WX显示', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'TERRAIN及WX显示',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '遵从高度/速度限制', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '遵从高度/速度限制',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '进行了位置及原始导航监控（ILS及VOR）', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '进行了位置及原始导航监控（ILS及VOR）',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '下降率控制', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '下降率控制',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '达到稳定进近高度', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '达到稳定进近高度',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '1000FT AFE时速度偏离', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '1000FT AFE时速度偏离',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '1000FT AFE时推力', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '1000FT AFE时推力',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -9947,340 +10757,368 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '决断高度速度', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '决断高度速度',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '决断高度标准喊话', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '决断高度标准喊话',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '着陆距离——着陆区标志', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '着陆距离——着陆区标志',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '停机余度——减至滑行速度时中线灯颜色', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '停机余度——减至滑行速度时中线灯颜色',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '转向快速脱离道速度', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '转向快速脱离道速度',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '转向直角脱离道速度', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '转向直角脱离道速度',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '着陆后程序开始执行时机', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '着陆后程序开始执行时机',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -10289,388 +11127,420 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: 'ATC指令复诵完整性PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'ATC指令复诵完整性PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '指令内容核实PF', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '指令内容核实PF',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FCU/MCP数据输入及喊话 PF', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FCU/MCP数据输入及喊话 PF',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FCU/MCP/ FMA数据核实及喊话 PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FCU/MCP/ FMA数据核实及喊话 PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FCU/MCP飞行方式输入及喊话 PF', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FCU/MCP飞行方式输入及喊话 PF',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMA方式证实及喊话 PF/PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMA方式证实及喊话 PF/PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '1000FT到改平喊话 PM', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '1000FT到改平喊话 PM',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'ATC通信过程中CABIN干扰', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'ATC通信过程中CABIN干扰',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -10679,196 +11549,212 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: 'FMS修改喊话 CM1', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS修改喊话 CM1',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMS修改输入CM1', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS修改输入CM1',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'FMS执行/引入确认 CM1+CM2', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'FMS执行/引入确认 CM1+CM2',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '执行/引入 CM1', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '执行/引入 CM1',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -10886,484 +11772,524 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '滑入前执行滑行路线简令', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑入前执行滑行路线简令',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '滑入及转弯左右清洁喊话', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑入及转弯左右清洁喊话',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '滑行路线监控及喊话提示', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑行路线监控及喊话提示',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '滑行冲突威胁喊话提示', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑行冲突威胁喊话提示',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '滑行推力使用（320<40% N1; 787< 30% N1）', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑行推力使用（320<40% N1; 787< 30% N1）',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '滑行地速控制（直线<30KT；转弯<10KT；机坪<10KT）', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑行地速控制（直线<30KT；转弯<10KT；机坪<10KT）',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '滑行转弯打滑', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '滑行转弯打滑',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '主滑畅通时的刹车使用', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '主滑畅通时的刹车使用',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '污染道面构型控制', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '污染道面构型控制',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: 'APU启动时机', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: 'APU启动时机',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -11381,148 +12307,160 @@ export const flightPhaseCheckItemInitData = [
         updateTime: '',
         details: [
           {
-            content: '空中出现故障或异常，未填写TLB', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '空中出现故障或异常，未填写TLB',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '执行了短停过站的刹车能量检查评估', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '执行了短停过站的刹车能量检查评估',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
           {
-            content: '执行了飞行后讲评', status: 1, updateTime: '', remarks: [], referenceItem: {
+            content: '执行了飞行后讲评',
+            status: 1,
+            updateTime: '',
+            remarks: [],
+            referenceItem: {
               inputs: [
                 {
                   code: 'R0005',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速'
+                      value: '风向/风速',
                     },
                     {
                       type: 'input',
                       key: 'windDirection',
                       unit: '',
-                      value: ''
+                      value: '',
                     },
                     {
                       type: 'text',
-                      value: '/'
+                      value: '/',
                     },
                     {
                       type: 'input',
                       key: 'windSpeed',
                       unit: 'KT',
-                      value: ''
-                    }
-                  ]
-                }
+                      value: '',
+                    },
+                  ],
+                },
               ],
               checkbox: {
                 list: [
                   {
                     code: 'R0006',
-                    text: '限制检查'
+                    text: '限制检查',
                   },
                   {
                     code: 'R0007',
-                    text: '备降评估'
+                    text: '备降评估',
                   },
                   {
                     code: 'R0008',
-                    text: '油量评估'
-                  }
+                    text: '油量评估',
+                  },
                 ],
-                checked: []
-              }
-            }
+                checked: [],
+              },
+            },
           },
         ],
       },
@@ -11533,7 +12471,6 @@ export const flightPhaseCheckItemInitData = [
     tem: temInitData,
   },
 ]
-
 
 // 各种下拉框数据
 // 飞机号（机型）
@@ -11593,5 +12530,5 @@ export const accountOption = [
   {
     label: '赵六(213661)',
     value: '赵六(213661)',
-  }
+  },
 ]

@@ -37,93 +37,9 @@ declare module 'vue-router/auto-routes' {
       { all: ParamValue<false> },
       | never
     >,
-    'Charts': RouteRecordInfo<
-      'Charts',
-      '/charts',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
     'Check': RouteRecordInfo<
       'Check',
       '/check',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    'Counter': RouteRecordInfo<
-      'Counter',
-      '/counter',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    'ForgotPassword': RouteRecordInfo<
-      'ForgotPassword',
-      '/forgot-password',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    'History': RouteRecordInfo<
-      'History',
-      '/history',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    'KeepAlive': RouteRecordInfo<
-      'KeepAlive',
-      '/keepalive',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    'Login': RouteRecordInfo<
-      'Login',
-      '/login',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    'Mock': RouteRecordInfo<
-      'Mock',
-      '/mock',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    'Profile': RouteRecordInfo<
-      'Profile',
-      '/profile',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    'Register': RouteRecordInfo<
-      'Register',
-      '/register',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    'ScrollCache': RouteRecordInfo<
-      'ScrollCache',
-      '/scroll-cache',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    'Settings': RouteRecordInfo<
-      'Settings',
-      '/settings',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    'UnoCSS': RouteRecordInfo<
-      'UnoCSS',
-      '/unocss',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -153,81 +69,9 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
-    'src/pages/charts/index.vue': {
-      routes:
-        | 'Charts'
-      views:
-        | never
-    }
     'src/pages/check/index.vue': {
       routes:
         | 'Check'
-      views:
-        | never
-    }
-    'src/pages/counter/index.vue': {
-      routes:
-        | 'Counter'
-      views:
-        | never
-    }
-    'src/pages/forgot-password/index.vue': {
-      routes:
-        | 'ForgotPassword'
-      views:
-        | never
-    }
-    'src/pages/history/index.vue': {
-      routes:
-        | 'History'
-      views:
-        | never
-    }
-    'src/pages/keepalive/index.vue': {
-      routes:
-        | 'KeepAlive'
-      views:
-        | never
-    }
-    'src/pages/login/index.vue': {
-      routes:
-        | 'Login'
-      views:
-        | never
-    }
-    'src/pages/mock/index.vue': {
-      routes:
-        | 'Mock'
-      views:
-        | never
-    }
-    'src/pages/profile/index.vue': {
-      routes:
-        | 'Profile'
-      views:
-        | never
-    }
-    'src/pages/register/index.vue': {
-      routes:
-        | 'Register'
-      views:
-        | never
-    }
-    'src/pages/scroll-cache/index.vue': {
-      routes:
-        | 'ScrollCache'
-      views:
-        | never
-    }
-    'src/pages/settings/index.vue': {
-      routes:
-        | 'Settings'
-      views:
-        | never
-    }
-    'src/pages/unocss/index.vue': {
-      routes:
-        | 'UnoCSS'
       views:
         | never
     }

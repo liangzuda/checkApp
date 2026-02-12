@@ -10,6 +10,15 @@ dayjs.extend(utc)
 const route = useRoute()
 const router = useRouter()
 
+// 防抖
+function debounce(fn, delay = 500) {
+  let timer = null
+  return (...args) => {
+    clearTimeout(timer)
+    timer = setTimeout(() => fn(...args), delay)
+  }
+}
+
 // 深拷贝
 function deepClone<T>(data: T): T {
   return JSON.parse(JSON.stringify(data))
@@ -24,7 +33,6 @@ function generateRandomId() {
 // 如果url有携带id，则需要从本地储存匹配
 const checkListIdFromUrl = route.query.id
 const checkListData = JSON.parse(localStorage.getItem('checkListData') || '[]')
-let tempData = null
 const defaultData = {
   id: generateRandomId(), // 检查单id
   status: 0, // 检查单状态 1已同步 0待同步
@@ -32,22 +40,19 @@ const defaultData = {
   updateTime: '', // 更新时间
   flightInfo: {
     flightTimeText: '', // 航班时间
-    flightNo: '', // 航班号
-    aircraft: '', // 飞机号
-    depAirport: '', // 起飞机场
-    arrAirport: '', // 到达机场
+    flightNo: 'A12345', // 航班号
+    aircraft: 'A320', // 飞机号
+    depAirport: 'CTU', // 起飞机场
+    arrAirport: 'PEK', // 到达机场
   },
   flightPhaseCheckItemData: deepClone(flightPhaseCheckItemInitData), // 阶段检查数据
   mainRemarkInitData: deepClone(mainRemarkInitData), // 备注数据
 }
-
-// 初始化检查单数据
-if (checkListIdFromUrl) {
-  tempData = checkListData.find(item => item.id === checkListIdFromUrl) || defaultData
-}
-else {
-  tempData = defaultData
-}
+const tempData = reactive(
+  checkListIdFromUrl
+    ? deepClone(checkListData.find(item => item.id === checkListIdFromUrl) || defaultData)
+    : deepClone(defaultData),
+)
 
 // 如果检查单的状态为已同步，则页面为只读状态
 const onlyRead = tempData.status === 1
@@ -57,7 +62,7 @@ function goBack() {
   if (!onlyRead)
     handleSaveCheckList()
   // 前往历史记录页面
-  router.push('/history')
+  router.push('/')
 }
 
 // 暂存检查单
@@ -76,7 +81,7 @@ function handleSaveCheckList() {
     checkListData.push(tempData)
   }
   localStorage.setItem('checkListData', JSON.stringify(checkListData))
-  showToast('保存成功')
+  // showToast('保存成功')
 }
 
 // 同步检查单
@@ -165,7 +170,7 @@ function openArr() {
 }
 // 账号popup选择
 function openAccount() {
-  currentField.value = 'account',
+  currentField.value = 'account'
   currentFieldCn.value = '账号'
   openDropdown()
 }
@@ -444,7 +449,7 @@ function handleOpenRemark(subItem?) {
     tempReferenceItem.value = null
   }
 
-  remarkHeight.value = window.innerHeight * 0.6
+  remarkHeight.value = window.innerHeight * 0.5
 
   if (onlyRead)
     return
@@ -514,6 +519,35 @@ function handleCancelRemark() {
   remarkList.value = null
   remarkHeight.value = 0
 }
+
+const autoSave = debounce(() => {
+  if (onlyRead)
+    return
+
+  tempData.updateTime = `${dayjs().utc().format('YYYY-MM-DD HH:mm:ss')}Z`
+  tempData.account = tempAccount.value
+
+  const index = checkListData.findIndex(item => item.id === tempData.id)
+
+  if (index !== -1) {
+    checkListData.splice(index, 1, tempData)
+  }
+  else {
+    checkListData.push(tempData)
+  }
+
+  localStorage.setItem('checkListData', JSON.stringify(checkListData))
+}, 500)
+
+watch(
+  () => tempData,
+  () => {
+    autoSave()
+  },
+  { deep: true },
+)
+watch(tempAccount, autoSave)
+watch(flightPhaseCheckItemData, autoSave, { deep: true })
 </script>
 
 <template>
