@@ -63,30 +63,30 @@ const onlyRead = tempData.status === 1
 
 // 返回历史记录页面
 function goBack() {
-  if (!onlyRead)
-    handleSaveCheckList()
+  // if (!onlyRead)
+  // handleSaveCheckList()
   // 前往历史记录页面
   router.push('/')
 }
 
 // 暂存检查单
-function handleSaveCheckList() {
-  // if (!validationForm()) return
-  tempData.updateTime = `${dayjs().utc().format('YYYY-MM-DD HH:mm:ss')}Z`
-  // 将tempData保存到localStore, 如果url有id的，则更新对应的
-  if (checkListIdFromUrl) {
-    checkListData.forEach((item, index) => {
-      if (item.id === checkListIdFromUrl) {
-        checkListData.splice(index, 1, tempData)
-      }
-    })
-  }
-  else {
-    checkListData.push(tempData)
-  }
-  localStorage.setItem('checkListData', JSON.stringify(checkListData))
-  // showToast('保存成功')
-}
+// function handleSaveCheckList() {
+//   // if (!validationForm()) return
+//   tempData.updateTime = `${dayjs().utc().format('YYYY-MM-DD HH:mm:ss')}Z`
+//   // 将tempData保存到localStore, 如果url有id的，则更新对应的
+//   if (checkListIdFromUrl) {
+//     checkListData.forEach((item, index) => {
+//       if (item.id === checkListIdFromUrl) {
+//         checkListData.splice(index, 1, tempData)
+//       }
+//     })
+//   }
+//   else {
+//     checkListData.push(tempData)
+//   }
+//   localStorage.setItem('checkListData', JSON.stringify(checkListData))
+//   // showToast('保存成功')
+// }
 
 // 同步检查单
 function handleSyncCheckList() {
