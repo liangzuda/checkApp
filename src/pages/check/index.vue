@@ -93,24 +93,11 @@ function handleSyncCheckList() {
   if (!validationForm())
     return
   tempData.updateTime = `${dayjs().utc().format('YYYY-MM-DD HH:mm:ss')}Z`
+  // 同步成功后，将状态改为已同步
+  tempData.status = 1
   // 模拟同步成功
   showDialog({ title: '提示', message: '同步成功' }).then(() => {
-    // 同步成功后，将状态改为已同步
-    tempData.status = 1
-    // 将tempData保存到localStore, 如果url有id的，则更新对应的
-    if (checkListIdFromUrl) {
-      checkListData.forEach((item, index) => {
-        if (item.id === checkListIdFromUrl) {
-          checkListData.splice(index, 1, tempData)
-        }
-      })
-    }
-    else {
-      checkListData.push(tempData)
-    }
-    localStorage.setItem('checkListData', JSON.stringify(checkListData))
-    // 前往历史记录页面
-    router.push('/')
+    setTimeout(() => router.push('/'), 500)
   })
 }
 
