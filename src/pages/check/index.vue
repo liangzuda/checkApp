@@ -359,7 +359,7 @@ function handleOpenTem() {
 }
 // TEM tabs切换
 function handleChangeTabTem(_: number) {
-  // activeCollapsedTem.value = '' // 重置TEM折叠面板
+  activeCollapsedTem.value = '' // 重置TEM折叠面板
 }
 // 计算TEM子项触发次数的总和
 function getTemSubItemsTotalSum(subItems: { name: string, triggerCount: number }[]) {
@@ -896,11 +896,12 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
             <div>{{ item.content }}</div>
           </div>
         </div>
+        <div class="h-20" />
       </div>
     </van-floating-panel>
 
     <!-- 检查单执行 弹出框 -->
-    <van-popup v-model:show="showCheckListExecution" position="bottom" round>
+    <van-popup v-model:show="showCheckListExecution" position="bottom" safe-area-inset-bottom round>
       <div class="p-4 bg-[#fff] flex items-center justify-between">
         <div>
           检查单执行
@@ -911,7 +912,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
           </van-button>
         </div>
       </div>
-      <div class="p-2 bg-[#f9f9f9]">
+      <div class="popup-scroll p-2 bg-[#f9f9f9] h-[60vh]">
         <div v-for="item, index in checkListExecutionData" :key="index">
           <div class="randed-[10px] font-size-16px font-bold p-2 bg-[#fff] shadow-[0_0_10px_rgba(0,0,0,0.1)]">
             {{ `${Number(index) + 1}、${item.name}` }}
@@ -927,11 +928,10 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
             </van-checkbox-group>
           </div>
         </div>
-        <div class="bg-[#f9f9f9] h-20" />
       </div>
     </van-popup>
     <!-- 驾驶舱整肃性 弹出框 -->
-    <van-popup v-model:show="showCockpitIntegrity" position="bottom" round>
+    <van-popup v-model:show="showCockpitIntegrity" position="bottom" safe-area-inset-bottom round>
       <div class="p-4 bg-[#fff] flex items-center justify-between">
         <div>
           驾驶舱整肃性
@@ -955,10 +955,9 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
           <!-- 选择框 -->
         </div>
       </div>
-      <div class="bg-[#f9f9f9] h-20" />
     </van-popup>
     <!-- TEM 弹出框 -->
-    <van-popup v-model:show="showTem" position="bottom" round>
+    <van-popup v-model:show="showTem" position="bottom" safe-area-inset-bottom round>
       <div class="p-4 bg-[#fff] flex items-center justify-between">
         <div>
           TEM
@@ -970,19 +969,18 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
         </div>
       </div>
       <van-tabs
-        v-model:active="activeTabtem" title-active-color="#1989fa" :ellipsis="false"
+        v-model:active="activeTabtem" title-active-color="#1989fa" :ellipsis="false" sticky
         @change="handleChangeTabTem"
       >
         <van-tab v-for="itemTemTabs, indexTemTabs in temTabs" :key="indexTemTabs" :title="itemTemTabs">
-          <div class="max-h-[70vh] overflow-y-auto">
-            <van-collapse v-model="activeCollapsedTem" accordion>
+          <van-collapse v-model="activeCollapsedTem" accordion>
+            <div class="popup-scroll h-[50vh]">
               <van-collapse-item v-for="item, index in activeTemData.items" :key="index" :name="`${Number(index) + 1}`">
                 <template #title>
                   <div class="flex items-center justify-between">
                     <div class="font-size-14px font-bold">
                       {{ item.name }}
                     </div>
-                    <!-- 触发总次数 -->
                     <div
                       v-show="getTemSubItemsTotalSum(item.subItems)"
                       class="font-size-12px c-[#fff] mr-2 rounded-2xl bg-[#ff0000] flex h-5 w-5 items-center justify-center"
@@ -996,8 +994,10 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
                     v-for="subItem, subIndex in item.subItems" :key="subIndex"
                     class="mb-4 p-2 b-1 b-solid flex select-none shadow-[0_0_10px_rgba(0,0,0,0.1)] items-center justify-between position-relative"
                     :class="subItem.triggerCount ? 'bg-[#fdf6ec] b-[#f5dcb5]' : 'bg-[#f2f2f2] b-[#99999945]'"
-                    @click="handleClickTemSubItem(subItem)" @touchstart="onTouchStartTemSubItem(subItem)"
-                    @touchend="onTouchEndTemSubItem" @touchmove="onTouchCancelTemSubItem"
+                    @click="handleClickTemSubItem(subItem)"
+                    @touchstart="onTouchStartTemSubItem(subItem)"
+                    @touchend="onTouchEndTemSubItem"
+                    @touchmove="onTouchCancelTemSubItem"
                   >
                     <div class="c-[#000]">
                       {{ subItem.name }}
@@ -1011,14 +1011,13 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
                   </div>
                 </div>
               </van-collapse-item>
-            </van-collapse>
-          </div>
+            </div>
+          </van-collapse>
         </van-tab>
       </van-tabs>
-      <div class="h-20" />
     </van-popup>
     <!-- 程序执行 弹出框 -->
-    <van-popup v-model:show="showProgramExecution" position="bottom" round>
+    <van-popup v-model:show="showProgramExecution" position="bottom" safe-area-inset-bottom round>
       <div class="p-4 bg-[#fff] flex items-center justify-between">
         <div>
           程序执行
@@ -1029,7 +1028,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
           </van-button>
         </div>
       </div>
-      <div class="max-h-[70vh] overflow-y-auto">
+      <div class="popup-scroll h-[60vh]">
         <van-collapse v-model="activeCollapsedProgramExecution" accordion>
           <van-collapse-item v-for="item, index in programExecutionData" :key="index" :name="`${Number(index) + 1}`">
             <template #title>
@@ -1068,7 +1067,6 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
           </van-collapse-item>
         </van-collapse>
       </div>
-      <div class="h-20" />
     </van-popup>
 
     <!-- 程序执行和TEM子项触发次数调整 弹出框 -->
@@ -1106,7 +1104,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
     </van-dialog>
 
     <!-- 同步 弹出框 -->
-    <van-popup v-model:show="showSync" position="bottom" round>
+    <van-popup v-model:show="showSync" position="bottom" safe-area-inset-bottom round>
       <div class="p-4 bg-[#fff] flex items-center justify-between">
         <div>
           同步
@@ -1188,12 +1186,11 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
             </div>
           </div>
         </div>
-        <div class="bg-[#fcfcfc] h-20" />
       </div>
     </van-popup>
 
     <!-- 航班时间 弹出框 -->
-    <van-popup v-model:show="showTimePicker" position="bottom" round>
+    <van-popup v-model:show="showTimePicker" position="bottom" safe-area-inset-bottom round>
       <van-picker-group
         v-model:active-tab="activeTabTimePicker" title="航班日期" :tabs="[
           '选择日期',
@@ -1207,7 +1204,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
     </van-popup>
 
     <!-- 通用可输入下拉 弹出框 -->
-    <van-popup v-model:show="showDropdown" position="bottom" round>
+    <van-popup v-model:show="showDropdown" position="bottom" safe-area-inset-bottom round>
       <div class="dropdown-panel">
         <div class="font-bold pl-4 pt-4 text-left">
           {{ currentFieldCn }}
@@ -1230,6 +1227,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
 .check-page {
   background-color: #f5f5f550;
   height: 100%;
+  user-select: none;
 
   .nav-bar {
     position: fixed;
@@ -1406,10 +1404,11 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
     }
   }
 
-  .fixed-button {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
+  .popup-scroll {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* 原生动量滚动 */
+    -ms-overflow-style: none; /* IE/Edge */
+    overscroll-behavior: contain; /* 防止穿透 */
   }
 }
 </style>

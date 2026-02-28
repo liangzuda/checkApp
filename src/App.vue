@@ -37,25 +37,25 @@ const mode = computed(() => {
   return isDark.value ? 'dark' : 'light'
 })
 
-onMounted(() => {
-  let startY = 0
+// onMounted(() => {
+//   let startY = 0
 
-  const start = (e) => {
-    startY = e.touches[0].pageY
-  }
+//   const start = (e) => {
+//     startY = e.touches[0].pageY
+//   }
 
-  const move = (e) => {
-    const y = e.touches[0].pageY
-    const scrollTop = document.documentElement.scrollTop
+//   const move = (e) => {
+//     const y = e.touches[0].pageY
+//     const scrollTop = document.documentElement.scrollTop
 
-    if (scrollTop === 0 && y > startY) {
-      e.preventDefault()
-    }
-  }
+//     if (scrollTop === 0 && y > startY) {
+//       e.preventDefault()
+//     }
+//   }
 
-  document.addEventListener('touchstart', start)
-  document.addEventListener('touchmove', move, { passive: false })
-})
+//   document.addEventListener('touchstart', start)
+//   document.addEventListener('touchmove', move, { passive: false })
+// })
 </script>
 
 <template>
