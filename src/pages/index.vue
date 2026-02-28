@@ -71,7 +71,7 @@ function handleRemoveCheckList(id: number) {
   <div class="historyRecord">
     <!-- 顶部导航栏 -->
     <div class="nav-bar px-2 flex items-center justify-between">
-      <div>LOSA检查单</div>
+      <div>FLYNOTE 检查单</div>
       <van-icon size="30" name="add-o" color="#409eff" @click="goCheckPage()" />
     </div>
     <!-- tab栏 -->
@@ -92,8 +92,8 @@ function handleRemoveCheckList(id: number) {
             class="p-2 rounded-5px bg-[#fff] flex shadow-[0_0_10px_rgba(0,0,0,0.1)] items-center justify-between"
             @click="goCheckPage(item.id)"
           >
-            <div class="">
-              <div class="text-sm text-[#333] font-bold">
+            <div>
+              <div class="text-sm text-[#333] w-65 text-nowrap text-ellipsis overflow-hidden">
                 {{ formatterflightInfoTitle(item.flightInfo || {}) }}
               </div>
               <div class="text-xs text-[#999]">
@@ -102,7 +102,7 @@ function handleRemoveCheckList(id: number) {
             </div>
             <div class="flex items-center justify-between">
               <span
-                class="font-size-12px line-height-12px mr-2"
+                class="text-xs mx-2"
                 :class="item.status === 1 ? 'text-[#52a6ff]' : 'text-[#f59f31]'"
               >
                 {{ item.status === 1 ? '已同步' : '待同步' }}

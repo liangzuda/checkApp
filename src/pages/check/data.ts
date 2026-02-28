@@ -1030,7 +1030,7 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [
                 {
-                  code: 'R0005',
+                  code: 'R0033',
                   fields: [
                     {
                       type: 'text',
@@ -1038,7 +1038,7 @@ export const flightPhaseCheckItemInitData = [
                     },
                     {
                       type: 'input',
-                      key: 'windDirection',
+                      key: 'OFPKG',
                       unit: 'KG',
                       value: '',
                     },
@@ -1046,20 +1046,7 @@ export const flightPhaseCheckItemInitData = [
                 },
               ],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -1072,46 +1059,23 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [
                 {
-                  code: 'R0005',
+                  code: 'R0034',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速',
+                      value: 'OFP调整',
                     },
                     {
                       type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
+                      key: 'OFPairport',
+                      unit: '机场',
                       value: '',
                     },
                   ],
                 },
               ],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -1124,46 +1088,29 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [
                 {
-                  code: 'R0005',
+                  code: 'R0035',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速',
+                      value: 'OFP调整',
                     },
                     {
                       type: 'input',
-                      key: 'windDirection',
-                      unit: '',
+                      key: 'OFPKG',
+                      unit: 'KG',
                       value: '',
                     },
                     {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
                       type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
+                      key: 'OFPmin',
+                      unit: '分钟',
                       value: '',
                     },
                   ],
                 },
               ],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -1176,46 +1123,29 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [
                 {
-                  code: 'R0005',
+                  code: 'R0036',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速',
+                      value: 'OFP调整',
                     },
                     {
                       type: 'input',
-                      key: 'windDirection',
-                      unit: '',
+                      key: 'OFPKG',
+                      unit: 'KG',
                       value: '',
                     },
                     {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
                       type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
+                      key: 'OFPmin',
+                      unit: '分钟',
                       value: '',
                     },
                   ],
                 },
               ],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -1228,46 +1158,44 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [
                 {
-                  code: 'R0005',
+                  code: 'R0037',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速',
+                      value: 'OFP调整',
                     },
                     {
                       type: 'input',
-                      key: 'windDirection',
-                      unit: '',
+                      key: 'OFPKG',
+                      unit: 'KG',
                       value: '',
                     },
                     {
+                      type: 'input',
+                      key: 'OFPmin',
+                      unit: '分钟',
+                      value: '',
+                    },
+                  ],
+                },
+                {
+                  code: 'R0037',
+                  fields: [
+                    {
                       type: 'text',
-                      value: '/',
+                      value: '原因:',
                     },
                     {
                       type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
+                      key: 'OFPreason',
+                      unit: '',
                       value: '',
                     },
                   ],
                 },
               ],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -1278,46 +1206,12 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
                 list: [
                   {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
+                    code: 'R0038',
+                    text: '评估控制',
                   },
                 ],
                 checked: [],
@@ -1336,46 +1230,20 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
                 list: [
                   {
-                    code: 'R0006',
-                    text: '限制检查',
+                    code: 'R0039',
+                    text: 'Pilots',
                   },
                   {
-                    code: 'R0007',
-                    text: '备降评估',
+                    code: 'R0040',
+                    text: 'Cabin',
                   },
                   {
-                    code: 'R0008',
-                    text: '油量评估',
+                    code: 'R0041',
+                    text: 'X-CHECK',
                   },
                 ],
                 checked: [],
@@ -1388,46 +1256,20 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
                 list: [
                   {
-                    code: 'R0006',
-                    text: '限制检查',
+                    code: 'R0042',
+                    text: 'Pilots',
                   },
                   {
-                    code: 'R0007',
-                    text: '备降评估',
+                    code: 'R0043',
+                    text: 'Cabin',
                   },
                   {
-                    code: 'R0008',
-                    text: '油量评估',
+                    code: 'R0044',
+                    text: 'X-CHECK',
                   },
                 ],
                 checked: [],
@@ -1440,46 +1282,16 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
                 list: [
                   {
-                    code: 'R0006',
-                    text: '限制检查',
+                    code: 'R0045',
+                    text: '图形化评估',
                   },
                   {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
+                    code: 'R0046',
+                    text: 'FPL颠簸指数',
                   },
                 ],
                 checked: [],
@@ -1492,48 +1304,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -1544,48 +1317,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -1596,48 +1330,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -1663,48 +1358,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -1717,46 +1373,23 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [
                 {
-                  code: 'R0005',
+                  code: 'R0051',
                   fields: [
                     {
                       type: 'text',
-                      value: '风向/风速',
+                      value: '偏离计划值',
                     },
                     {
                       type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
+                      key: 'deviationWeight',
+                      unit: 'KG',
                       value: '',
                     },
                   ],
                 },
               ],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -1767,46 +1400,20 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
                 list: [
                   {
-                    code: 'R0006',
-                    text: '限制检查',
+                    code: 'R0052',
+                    text: 'Pilots',
                   },
                   {
-                    code: 'R0007',
-                    text: '备降评估',
+                    code: 'R0053',
+                    text: 'Cabin',
                   },
                   {
-                    code: 'R0008',
-                    text: '油量评估',
+                    code: 'R0054',
+                    text: 'X-CHECK',
                   },
                 ],
                 checked: [],
@@ -1819,46 +1426,20 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
                 list: [
                   {
-                    code: 'R0006',
-                    text: '限制检查',
+                    code: 'R0055',
+                    text: 'Pilots',
                   },
                   {
-                    code: 'R0007',
-                    text: '备降评估',
+                    code: 'R0056',
+                    text: 'MNT',
                   },
                   {
-                    code: 'R0008',
-                    text: '油量评估',
+                    code: 'R0057',
+                    text: 'X-CHECK',
                   },
                 ],
                 checked: [],
@@ -1871,46 +1452,12 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
                 list: [
                   {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
+                    code: 'R0058',
+                    text: 'PILOTS-MNT-XCHECK',
                   },
                 ],
                 checked: [],
@@ -1929,48 +1476,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -1981,48 +1489,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2033,48 +1502,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2085,46 +1515,24 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
                 list: [
                   {
-                    code: 'R0006',
-                    text: '限制检查',
+                    code: 'R0062',
+                    text: 'LAST-POS',
                   },
                   {
-                    code: 'R0007',
-                    text: '备降评估',
+                    code: 'R0063',
+                    text: 'ARP',
                   },
                   {
-                    code: 'R0008',
-                    text: '油量评估',
+                    code: 'R0064',
+                    text: 'GPS',
+                  },
+                  {
+                    code: 'R0065',
+                    text: 'GATE',
                   },
                 ],
                 checked: [],
@@ -2137,48 +1545,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2195,48 +1564,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2247,48 +1577,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2299,48 +1590,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2351,48 +1603,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2403,48 +1616,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2455,48 +1629,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2507,47 +1642,14 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
                 list: [
                   {
-                    code: 'R0006',
-                    text: '限制检查',
+                    code: 'R0073',
+                    text: '人工删除限制',
                   },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
+
                 ],
                 checked: [],
               },
@@ -2559,48 +1661,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2617,48 +1680,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2669,48 +1693,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2721,48 +1706,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2773,48 +1719,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2831,48 +1738,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2883,48 +1751,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2935,48 +1764,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -2987,46 +1777,20 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
                 list: [
                   {
-                    code: 'R0006',
-                    text: '限制检查',
+                    code: 'R0082',
+                    text: '平均风',
                   },
                   {
-                    code: 'R0007',
-                    text: '备降评估',
+                    code: 'R0083',
+                    text: '历史风',
                   },
                   {
-                    code: 'R0008',
-                    text: '油量评估',
+                    code: 'R0084',
+                    text: 'ACARS风',
                   },
                 ],
                 checked: [],
@@ -3039,48 +1803,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3091,48 +1816,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3143,48 +1829,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3195,48 +1842,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3253,46 +1861,24 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
                 list: [
                   {
-                    code: 'R0006',
-                    text: '限制检查',
+                    code: 'R0089',
+                    text: '航班号',
                   },
                   {
-                    code: 'R0007',
-                    text: '备降评估',
+                    code: 'R0090',
+                    text: '起降场',
                   },
                   {
-                    code: 'R0008',
-                    text: '油量评估',
+                    code: 'R0091',
+                    text: '飞机号',
+                  },
+                  {
+                    code: 'R0092',
+                    text: '版本号',
                   },
                 ],
                 checked: [],
@@ -3305,46 +1891,16 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
                 list: [
                   {
-                    code: 'R0006',
-                    text: '限制检查',
+                    code: 'R0093',
+                    text: '舱单DOW与OFP差异检查',
                   },
                   {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
+                    code: 'R0094',
+                    text: '舱单DOW与任务书差异检查',
                   },
                 ],
                 checked: [],
@@ -3357,46 +1913,28 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
                 list: [
                   {
-                    code: 'R0006',
-                    text: '限制检查',
+                    code: 'R0095',
+                    text: 'ZFW与OFP差异检查',
                   },
                   {
-                    code: 'R0007',
-                    text: '备降评估',
+                    code: 'R0096',
+                    text: 'GW与OFP差异检查',
                   },
                   {
-                    code: 'R0008',
-                    text: '油量评估',
+                    code: 'R0097',
+                    text: 'TO FU与OFP差异检查',
+                  },
+                  {
+                    code: 'R0098',
+                    text: 'TOW与OFP差异检查',
+                  },
+                  {
+                    code: 'R0099',
+                    text: 'LDW与OFP差异检查',
                   },
                 ],
                 checked: [],
@@ -3409,48 +1947,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3461,48 +1960,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3513,48 +1973,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3565,48 +1986,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3623,48 +2005,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3675,48 +2018,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3727,48 +2031,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3779,48 +2044,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3831,48 +2057,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3883,48 +2070,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3935,48 +2083,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -3987,48 +2096,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4039,48 +2109,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4091,48 +2122,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4143,48 +2135,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4195,48 +2148,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4247,48 +2161,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4305,48 +2180,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4357,48 +2193,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4409,48 +2206,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4461,48 +2219,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4513,48 +2232,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4565,48 +2245,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4617,48 +2258,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4669,48 +2271,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4721,48 +2284,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4773,48 +2297,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4840,48 +2325,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4892,48 +2338,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4944,48 +2351,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -4996,48 +2364,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5048,48 +2377,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5100,48 +2390,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5152,48 +2403,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5210,48 +2422,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5262,48 +2435,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5314,48 +2448,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5366,48 +2461,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5418,48 +2474,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5470,48 +2487,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5522,48 +2500,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5574,48 +2513,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5626,48 +2526,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5678,48 +2539,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5736,48 +2558,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5803,48 +2586,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5855,48 +2599,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5907,48 +2612,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -5959,48 +2625,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6011,48 +2638,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6063,48 +2651,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6115,48 +2664,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6167,48 +2677,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6219,48 +2690,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6286,48 +2718,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6338,48 +2731,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6390,48 +2744,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6442,48 +2757,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6494,48 +2770,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6552,48 +2789,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6604,48 +2802,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6656,48 +2815,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6708,48 +2828,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6760,48 +2841,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6812,48 +2854,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6864,48 +2867,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6916,48 +2880,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -6974,48 +2899,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7026,48 +2912,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7078,48 +2925,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7130,48 +2938,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7197,48 +2966,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7249,48 +2979,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7301,48 +2992,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7353,48 +3005,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7405,48 +3018,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7457,48 +3031,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7509,48 +3044,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7561,48 +3057,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7613,48 +3070,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7671,48 +3089,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7723,48 +3102,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7775,48 +3115,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7827,48 +3128,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7879,48 +3141,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7931,48 +3154,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -7983,48 +3167,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8041,48 +3186,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8093,48 +3199,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8145,48 +3212,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8197,48 +3225,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8249,48 +3238,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8301,48 +3251,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8353,48 +3264,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8405,48 +3277,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8457,48 +3290,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8509,48 +3303,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8561,48 +3316,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8619,48 +3335,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8671,48 +3348,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8723,48 +3361,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8775,48 +3374,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8827,48 +3387,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8879,48 +3400,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8931,48 +3413,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -8983,48 +3426,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9041,48 +3445,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9093,48 +3458,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9145,48 +3471,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9197,48 +3484,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9264,48 +3512,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9316,48 +3525,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9368,48 +3538,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9420,48 +3551,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9472,48 +3564,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9524,48 +3577,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9576,48 +3590,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9628,48 +3603,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9686,48 +3622,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9738,48 +3635,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9790,48 +3648,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9842,48 +3661,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9894,48 +3674,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9946,48 +3687,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -9998,48 +3700,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10050,48 +3713,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10108,48 +3732,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10160,48 +3745,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10212,48 +3758,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10264,48 +3771,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10331,48 +3799,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10383,48 +3812,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10435,48 +3825,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10487,48 +3838,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10539,48 +3851,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10591,48 +3864,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10643,48 +3877,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10695,48 +3890,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10753,48 +3909,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10805,48 +3922,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10857,48 +3935,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10909,48 +3948,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -10961,48 +3961,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11013,48 +3974,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11065,48 +3987,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11123,48 +4006,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11175,48 +4019,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11227,48 +4032,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11279,48 +4045,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11331,48 +4058,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11383,48 +4071,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11435,48 +4084,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11487,48 +4097,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11545,48 +4116,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11597,48 +4129,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11649,48 +4142,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11701,48 +4155,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11768,48 +4183,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11820,48 +4196,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11872,48 +4209,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11924,48 +4222,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -11976,48 +4235,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -12028,48 +4248,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -12080,48 +4261,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -12132,48 +4274,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -12184,48 +4287,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -12236,48 +4300,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -12303,48 +4328,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -12355,48 +4341,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -12407,48 +4354,9 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [
-                {
-                  code: 'R0005',
-                  fields: [
-                    {
-                      type: 'text',
-                      value: '风向/风速',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windDirection',
-                      unit: '',
-                      value: '',
-                    },
-                    {
-                      type: 'text',
-                      value: '/',
-                    },
-                    {
-                      type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
-                      value: '',
-                    },
-                  ],
-                },
-              ],
+              inputs: [],
               checkbox: {
-                list: [
-                  {
-                    code: 'R0006',
-                    text: '限制检查',
-                  },
-                  {
-                    code: 'R0007',
-                    text: '备降评估',
-                  },
-                  {
-                    code: 'R0008',
-                    text: '油量评估',
-                  },
-                ],
+                list: [],
                 checked: [],
               },
             },
@@ -12460,66 +4368,5 @@ export const flightPhaseCheckItemInitData = [
     checkListExecution: checkListExecutionInitData,
     cockpitIntegrity: cockpitIntegrityInitData,
     tem: temInitData,
-  },
-]
-
-// 各种下拉框数据
-// 飞机号（机型）
-export const aircraftOption = [
-  {
-    label: 'B737-8',
-    value: 'B737-8',
-  },
-  {
-    label: 'A320',
-    value: 'A320',
-  },
-  {
-    label: 'A321',
-    value: 'A321',
-  },
-  {
-    label: 'ARJ21',
-    value: 'ARJ21',
-  },
-]
-
-// 机场
-export const airportOption = [
-  {
-    label: 'CTU 成都',
-    value: 'CTU',
-  },
-  {
-    label: 'SZX 深圳',
-    value: 'SZX',
-  },
-  {
-    label: 'HGH 杭州',
-    value: 'HGH',
-  },
-  {
-    label: 'PEK 北京',
-    value: 'PEK',
-  },
-]
-
-// 账号
-export const accountOption = [
-  {
-    label: '张三(213658)',
-    value: '张三(213658)',
-  },
-  {
-    label: '李四(213659)',
-    value: '李四(213659)',
-  },
-  {
-    label: '王五(213660)',
-    value: '王五(213660)',
-  },
-  {
-    label: '赵六(213661)',
-    value: '赵六(213661)',
   },
 ]

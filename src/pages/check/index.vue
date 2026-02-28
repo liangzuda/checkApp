@@ -3,16 +3,13 @@ import { computed, reactive, ref } from 'vue'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import { showDialog, showToast } from 'vant'
-import { accountOption, aircraftOption, airportOption, flightPhaseCheckItemInitData, mainRemarkInitData } from './data'
+import { flightPhaseCheckItemInitData, mainRemarkInitData } from './data'
+import { accountOption, aircraftOption, airportList } from './options'
 import { useRoute, useRouter } from 'vue-router'
 
 dayjs.extend(utc)
 const route = useRoute()
 const router = useRouter()
-
-function getSafeHeight() {
-  return window.visualViewport?.height || window.innerHeight
-}
 
 // 防抖
 function debounce(fn, delay = 500) {
@@ -45,9 +42,9 @@ const defaultData = {
   flightInfo: {
     flightTimeText: '', // 航班时间
     flightNo: 'A12345', // 航班号
-    aircraft: 'A320', // 飞机号
-    depAirport: 'CTU', // 起飞机场
-    arrAirport: 'PEK', // 到达机场
+    aircraft: 'A320-200', // 飞机号
+    depAirport: 'apt_icao', // 起飞机场
+    arrAirport: 'apt_icao', // 到达机场
   },
   flightPhaseCheckItemData: deepClone(flightPhaseCheckItemInitData), // 阶段检查数据
   mainRemarkInitData: deepClone(mainRemarkInitData), // 备注数据
@@ -68,25 +65,6 @@ function goBack() {
   // 前往历史记录页面
   router.push('/')
 }
-
-// 暂存检查单
-// function handleSaveCheckList() {
-//   // if (!validationForm()) return
-//   tempData.updateTime = `${dayjs().utc().format('YYYY-MM-DD HH:mm:ss')}Z`
-//   // 将tempData保存到localStore, 如果url有id的，则更新对应的
-//   if (checkListIdFromUrl) {
-//     checkListData.forEach((item, index) => {
-//       if (item.id === checkListIdFromUrl) {
-//         checkListData.splice(index, 1, tempData)
-//       }
-//     })
-//   }
-//   else {
-//     checkListData.push(tempData)
-//   }
-//   localStorage.setItem('checkListData', JSON.stringify(checkListData))
-//   // showToast('保存成功')
-// }
 
 // 同步检查单
 function handleSyncCheckList() {
@@ -126,9 +104,14 @@ function onTimeConfirm() {
 
 /* ===== 可输入下拉 ===== */
 const showDropdown = ref(false) // 下拉显示
-const search = ref('') // 搜索内容
+const optionSearch = ref('') // 搜索内容
 const currentField = ref<'aircraft' | 'dep' | 'arr' | 'account'>('aircraft') // 当前输入字段
 const currentFieldCn = ref<'飞机号' | '起飞机场' | '到达机场' | '账号'>('飞机号') // 当前输入字段中文
+
+const airportOption = airportList.map(item => ({
+  label: item,
+  value: item,
+}))
 
 const options = {
   // 飞机号
@@ -139,6 +122,67 @@ const options = {
   arr: airportOption,
   // 账号
   account: accountOption,
+}
+
+// 搜索结果
+const filteredList = computed(() => {
+  const list = options[currentField.value] || [] // 当前字段对应的数据列表
+  return list.filter(i => i.label.toLowerCase().includes(optionSearch.value.toLowerCase())) // 搜索结果,包含搜索内容的项
+})
+
+const pageSize = 20
+const currentPage = ref(1)
+// 真正渲染的下拉框列表
+const optionList = ref([])
+const optionLoading = ref(false)
+const optionFinished = ref(false)
+
+// 增加新的渲染数据
+function onLoadOptionList() {
+  const start = (currentPage.value - 1) * pageSize
+  const end = start + pageSize
+
+  const currentData = filteredList.value.slice(start, end)
+
+  optionList.value.push(...currentData)
+
+  optionLoading.value = false
+
+  if (optionList.value.length >= filteredList.value.length) {
+    optionFinished.value = true
+  }
+  else {
+    currentPage.value++
+  }
+};
+
+const scrollContainer = ref<HTMLElement | null>(null) // 渲染列表ref
+function resetList() {
+  optionList.value = []
+  optionFinished.value = false
+  currentPage.value = 1
+  optionLoading.value = true
+
+  // 重置滚动
+  nextTick(() => {
+    scrollContainer.value?.scrollTo({
+      top: 0,
+      behavior: 'auto',
+    })
+  })
+
+  onLoadOptionList()
+}
+
+watch([optionSearch, currentField], () => {
+  resetList()
+})
+
+// 打开下拉选择
+function openDropdown() {
+  optionSearch.value = ''
+  showDropdown.value = true
+  resetList()
 }
 
 // 飞机号popup选择
@@ -165,17 +209,6 @@ function openAccount() {
   currentFieldCn.value = '账号'
   openDropdown()
 }
-// 下拉选择
-function openDropdown() {
-  search.value = ''
-  showDropdown.value = true
-}
-
-// 搜索结果
-const filteredList = computed(() => {
-  const list = options[currentField.value] || [] // 当前字段对应的数据列表
-  return list.filter(i => i.label.toLowerCase().includes(search.value.toLowerCase())) // 搜索结果,包含搜索内容的项
-})
 
 // 选择,根据当前字段赋值
 function onSelect(val: string) {
@@ -190,6 +223,7 @@ function onSelect(val: string) {
   showDropdown.value = false
 }
 
+// 左上角航班信息
 const titleText = computed(() => {
   const defaultTitle = ''
   const mmdd = `${dayjs(form.flightTimeText).format('MM-DD')}`
@@ -419,8 +453,7 @@ function handleCancelLongPressDialog() {
 }
 
 // 备注
-const remarkHeight = ref(0)
-const remarkAnchors = [0, 100, 150, getSafeHeight() * 0.6]
+const showRemark = ref(false)
 const remarkInput = ref(null)
 const remarkList = ref(null)
 const tempReferenceItem = ref(null)
@@ -440,7 +473,7 @@ function handleOpenRemark(subItem?) {
     tempReferenceItem.value = null
   }
 
-  remarkHeight.value = getSafeHeight() * 0.4
+  showRemark.value = true
 
   if (onlyRead)
     return
@@ -449,11 +482,6 @@ function handleOpenRemark(subItem?) {
   setTimeout(() => {
     remarkInput.value?.focus()
   }, 50)
-}
-
-function heightChange(e) {
-  if (e.height <= 100)
-    remarkHeight.value = 0
 }
 
 function handleAddQuickIdentifier(identifier: string) {
@@ -480,10 +508,10 @@ function handleSaveRemark() {
     // showSuccessToast('保存成功')
   }
 
+  showRemark.value = false
   tempReferenceItem.value = null
   tempRemark.value = ''
   remarkList.value = null
-  remarkHeight.value = 0
 }
 
 function handleRemoveRemark(item) {
@@ -507,9 +535,9 @@ function handleRemoveRemark(item) {
 }
 
 function handleCancelRemark() {
+  showRemark.value = false
   tempReferenceItem.value = null
   remarkList.value = null
-  remarkHeight.value = 0
 }
 
 const autoSave = debounce(() => {
@@ -548,17 +576,17 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
     <div class="nav-bar">
       <div class="nav-bar-warp">
         <div class="flex items-center justify-center">
-          <van-icon name="arrow-left" class="mr-1" @click="goBack" />
+          <van-icon name="arrow-left" class="mr-2" @click="goBack" />
           <span
             class="text-nowrap text-ellipsis overflow-hidden" :class="[
               showFlightInfo ? 'font-size-16px' : 'font-size-12px',
-              onlyRead ? '' : 'w-45',
+              onlyRead ? '' : 'w-60',
             ]"
           >
             {{ titleText }}
           </span>
           <span v-show="!showFlightInfo" @click="() => showFlightInfo = true">
-            <van-icon name="arrow-down" color="#409eff" size="24" />
+            <van-icon name="arrow-down" color="#409eff" size="20" />
           </span>
         </div>
         <div class="operation">
@@ -583,7 +611,9 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
     <div v-show="showFlightInfo" class="flight-info mt-6px py-12px pr-12px bg-[#fff]">
       <!-- 同步账号 -->
       <div v-if="onlyRead" class="mb-4px pl-12px">
-        <span class="label">同步账号：{{ tempData.account }}</span>
+        <div class="label">
+          同步账号：{{ tempData.account }}
+        </div>
       </div>
       <div class="form-grid">
         <!-- 航班时间 -->
@@ -806,34 +836,29 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
 
     <!-- 备注 固定悬浮按钮 -->
     <van-floating-bubble
-      v-if="!remarkHeight" class="opacity-50" axis="xy" magnetic="x" :gap="{ x: 24, y: 60 }"
+      class="opacity-50" axis="xy" magnetic="x" :gap="{ x: 24, y: 48 }"
       icon="records-o" @click.stop="() => handleOpenRemark()"
     />
     <!-- 备注 弹出框 -->
-    <van-floating-panel
-      v-model:height="remarkHeight" class="my-floating-panel" :content-draggable="true"
-      :magnetic="false" :anchors="remarkAnchors" @height-change="heightChange"
-    >
+    <van-popup v-model:show="showRemark" class="my-floating-panel" round>
       <!-- 弹出框顶部 -->
-      <template #header>
-        <div
-          class="px-4 py-2 b-t-1 b-[#bbb] rounded-t-[10px] b-solid bg-[#fff] flex shadow-[0_0_10px_rgba(0,0,0,0.1)] items-center justify-between"
-        >
-          <div class="font-size-12px w-50 text-nowrap text-ellipsis overflow-hidden" :title="remarkTitle">
-            {{ remarkTitle }}
-          </div>
-          <div class="flex gap-4 items-center">
-            <van-button v-show="!onlyRead" size="small" color="#70b603" @click="handleSaveRemark">
-              <span class="px-2">保存</span>
-            </van-button>
-            <van-button size="small" @click="handleCancelRemark">
-              <span class="px-2">收起</span>
-            </van-button>
-          </div>
+      <div
+        class="px-4 py-2 b-t-1 b-[#bbb] rounded-t-[10px] b-solid bg-[#fff] flex max-h-[60vh] w-[90vw] shadow-[0_0_10px_rgba(0,0,0,0.1)] items-center justify-between"
+      >
+        <div class="font-size-12px w-[65%] text-nowrap text-ellipsis overflow-hidden" :title="remarkTitle">
+          {{ remarkTitle }}
         </div>
-      </template>
+        <div class="flex gap-4 items-center">
+          <van-button v-show="!onlyRead" size="small" color="#70b603" @click="handleSaveRemark">
+            保存
+          </van-button>
+          <van-button size="small" @click="handleCancelRemark">
+            取消
+          </van-button>
+        </div>
+      </div>
       <!-- 弹出框内容 -->
-      <div class="p-2 bg-[#f8f8f8] h-full">
+      <div class="px-2 pb-4 pt-2 bg-[#f8f8f8] h-full">
         <!-- 编辑区 -->
         <div v-show="!onlyRead" class="font-size-14px p-2 rounded-t-[10px] bg-[#fff] shadow-[0_0_10px_rgba(0,0,0,0.1)]">
           <van-field
@@ -855,10 +880,10 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
         <!-- 参考项区 -->
         <div
           v-if="tempReferenceItem?.inputs?.length > 0 || tempReferenceItem?.checkbox?.list?.length > 0"
-          class="font-size-12px mt-2 p-4 rounded-[10px] bg-[#fff]"
+          class="font-size-12px mt-2 p-4 rounded-[10px] bg-[#fff] flex flex-col gap-2"
         >
           <!-- 填空类型 -->
-          <div v-for="input in tempReferenceItem.inputs" :key="input" class="reference-item-input mb-2">
+          <div v-for="input in tempReferenceItem.inputs" :key="input" class="reference-item-input">
             <!-- 一组输入模板 -->
             <template v-for="item in input.fields" :key="item">
               <!-- 文本 -->
@@ -873,32 +898,31 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
             </template>
           </div>
           <!-- 复选类型 -->
-          <div class="">
-            <van-checkbox-group v-model="tempReferenceItem.checkbox.checked" shape="square" :disabled="onlyRead">
-              <van-checkbox v-for="item in tempReferenceItem.checkbox.list" :key="item" :name="item.code" class="mb-2">
-                {{ item.text }}
-              </van-checkbox>
-            </van-checkbox-group>
-          </div>
+          <van-checkbox-group v-model="tempReferenceItem.checkbox.checked" shape="square" :disabled="onlyRead" class="flex flex-col gap-2">
+            <van-checkbox v-for="item in tempReferenceItem.checkbox.list" :key="item" :name="item.code">
+              {{ item.text }}
+            </van-checkbox>
+          </van-checkbox-group>
         </div>
         <!-- 展示区 -->
-        <div v-for="item, index in remarkList" :key="index" class="mt-2">
-          <div class="font-size-14px p-2 rounded-[10px] bg-[#fff] shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            <div class="flex items-center justify-between">
-              <div class="c-[#999]">
-                {{ dayjs(item.updateTime).utc().format('YYYY/MM/DD HH:mm:ss[Z]') }}
+        <div class="max-h-[40vh] min-h-[2vh] overflow-y-auto">
+          <div v-for="item, index in remarkList" :key="index" class="mt-2">
+            <div class="font-size-14px p-2 rounded-[10px] bg-[#fff] shadow-[0_0_10px_rgba(0,0,0,0.1)]">
+              <div class="flex items-center justify-between">
+                <div class="c-[#999]">
+                  {{ dayjs(item.updateTime).utc().format('YYYY/MM/DD HH:mm:ss[Z]') }}
+                </div>
+                <div v-if="!onlyRead" @click="handleRemoveRemark(item)">
+                  <van-icon size="14" name="close" />
+                </div>
               </div>
-              <div v-if="!onlyRead" @click="handleRemoveRemark(item)">
-                <van-icon size="14" name="close" />
-              </div>
-            </div>
 
-            <div>{{ item.content }}</div>
+              <div>{{ item.content }}</div>
+            </div>
           </div>
         </div>
-        <div class="h-20" />
       </div>
-    </van-floating-panel>
+    </van-popup>
 
     <!-- 检查单执行 弹出框 -->
     <van-popup v-model:show="showCheckListExecution" position="bottom" safe-area-inset-bottom round>
@@ -1204,16 +1228,25 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
     </van-popup>
 
     <!-- 通用可输入下拉 弹出框 -->
-    <van-popup v-model:show="showDropdown" position="bottom" safe-area-inset-bottom round>
+    <van-popup v-model:show="showDropdown" position="bottom" safe-area-inset-bottom round transition-appear>
       <div class="dropdown-panel">
         <div class="font-bold pl-4 pt-4 text-left">
           {{ currentFieldCn }}
         </div>
-        <van-field v-model="search" placeholder="输入筛选" clearable />
-        <van-cell
-          v-for="item in filteredList" :key="item.value" :title="item.label" clickable
-          @click="onSelect(item.value)"
-        />
+        <van-field v-model="optionSearch" placeholder="输入筛选" clearable />
+        <div ref="scrollContainer" class="h-[30vh] overflow-y-auto">
+          <van-list
+            v-model:loading="optionLoading"
+            :finished="optionFinished"
+            finished-text="没有更多了"
+            @load="onLoadOptionList"
+          >
+            <van-cell
+              v-for="item in optionList" :key="item.value" :title="item.label" clickable
+              @click="onSelect(item.value)"
+            />
+          </van-list>
+        </div>
       </div>
     </van-popup>
   </div>
