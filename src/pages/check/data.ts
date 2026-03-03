@@ -1962,7 +1962,16 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0101',
+                    text: 'FMS与OFP飞行时间差异检查',
+                  },
+                  {
+                    code: 'R0102',
+                    text: 'FMS与OFP剩油差异检查',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -1986,9 +1995,45 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [],
+              inputs: [
+                {
+                  code: 'R0104',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '人数变更',
+                    },
+                    {
+                      type: 'input',
+                      key: 'weight',
+                      unit: 'KG',
+                      value: '',
+                    },
+                  ],
+                },
+                {
+                  code: 'R0105',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '重量变更',
+                    },
+                    {
+                      type: 'input',
+                      key: 'weight',
+                      unit: 'KG',
+                      value: '',
+                    },
+                  ],
+                },
+              ],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0106',
+                    text: '舱单更新',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2007,7 +2052,20 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0107',
+                    text: '版本号',
+                  },
+                  {
+                    code: 'R0108',
+                    text: '飞机号',
+                  },
+                  {
+                    code: 'R0109',
+                    text: '构型',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2020,7 +2078,12 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0110',
+                    text: '最新的ATIS',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2033,7 +2096,20 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0111',
+                    text: 'VRB设为顶风',
+                  },
+                  {
+                    code: 'R0112',
+                    text: 'VRB设为顺风',
+                  },
+                  {
+                    code: 'R0113',
+                    text: 'VRB设为静风',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2046,7 +2122,12 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0114',
+                    text: '不使用减推力',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2059,7 +2140,12 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0115',
+                    text: '考虑TAXI OUT FUEL',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2137,7 +2223,16 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0121',
+                    text: 'FMS默认高度',
+                  },
+                  {
+                    code: 'R0122',
+                    text: '该跑道最低收襟翼限制高度',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2150,7 +2245,16 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0123',
+                    text: '按照跑道NADP要求',
+                  },
+                  {
+                    code: 'R0124',
+                    text: '在没有NADP要求的跑道设置减噪',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2163,7 +2267,16 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0125',
+                    text: '人为修改速度',
+                  },
+                  {
+                    code: 'R0126',
+                    text: '人为修改FLEX',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2182,7 +2295,24 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0127',
+                    text: '舱单时间压力',
+                  },
+                  {
+                    code: 'R0128',
+                    text: '勤务客舱干扰',
+                  },
+                  {
+                    code: 'R0129',
+                    text: 'ATC通信干扰',
+                  },
+                  {
+                    code: 'R0130',
+                    text: '其他干扰',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2195,7 +2325,24 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0131',
+                    text: '舱单时间压力',
+                  },
+                  {
+                    code: 'R0132',
+                    text: '勤务客舱干扰',
+                  },
+                  {
+                    code: 'R0133',
+                    text: 'ATC通信干扰',
+                  },
+                  {
+                    code: 'R0134',
+                    text: '其他干扰',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2208,7 +2355,20 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0135',
+                    text: '完整路线',
+                  },
+                  {
+                    code: 'R0136',
+                    text: '配合机坪图',
+                  },
+                  {
+                    code: 'R0137',
+                    text: '配合ND或FMS',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2221,7 +2381,24 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0138',
+                    text: '标高',
+                  },
+                  {
+                    code: 'R0139',
+                    text: '距离',
+                  },
+                  {
+                    code: 'R0140',
+                    text: '配合机场图',
+                  },
+                  {
+                    code: 'R0141',
+                    text: '配合ND或FMS',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2234,7 +2411,24 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0142',
+                    text: '离场代码',
+                  },
+                  {
+                    code: 'R0143',
+                    text: '航路点及路线',
+                  },
+                  {
+                    code: 'R0144',
+                    text: '配合离场图',
+                  },
+                  {
+                    code: 'R0145',
+                    text: '配合ND或FMS',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2247,7 +2441,36 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0146',
+                    text: '高度速度限制',
+                  },
+                  {
+                    code: 'R0147',
+                    text: 'MSA及地形',
+                  },
+                  {
+                    code: 'R0148',
+                    text: 'RNP',
+                  },
+                  {
+                    code: 'R0149',
+                    text: 'ANP',
+                  },
+                  {
+                    code: 'R0150',
+                    text: 'TA',
+                  },
+                  {
+                    code: 'R0151',
+                    text: '配合离场图',
+                  },
+                  {
+                    code: 'R0152',
+                    text: 'ND或FMS',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2260,7 +2483,28 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0153',
+                    text: '时间',
+                  },
+                  {
+                    code: 'R0154',
+                    text: '距离',
+                  },
+                  {
+                    code: 'R0155',
+                    text: '油量',
+                  },
+                  {
+                    code: 'R0156',
+                    text: '配合OFP',
+                  },
+                  {
+                    code: 'R0157',
+                    text: '配合FMS',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2273,7 +2517,12 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0158',
+                    text: '配合FMS页面',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2286,7 +2535,28 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0159',
+                    text: '中断',
+                  },
+                  {
+                    code: 'R0160',
+                    text: '撤离',
+                  },
+                  {
+                    code: 'R0161',
+                    text: '超重返场着陆',
+                  },
+                  {
+                    code: 'R0162',
+                    text: '返场跑道进近图',
+                  },
+                  {
+                    code: 'R0163',
+                    text: '起飞备降预案',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2424,7 +2694,16 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0203',
+                    text: 'PF',
+                  },
+                  {
+                    code: 'R0204',
+                    text: 'PM',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2437,7 +2716,16 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0205',
+                    text: 'PF',
+                  },
+                  {
+                    code: 'R0206',
+                    text: 'PM',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2450,7 +2738,16 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0207',
+                    text: 'PF',
+                  },
+                  {
+                    code: 'R0208',
+                    text: 'PM',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2463,7 +2760,16 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0209',
+                    text: 'PF',
+                  },
+                  {
+                    code: 'R0210',
+                    text: 'PM',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2474,7 +2780,23 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [],
+              inputs: [
+                {
+                  code: 'R0211',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: 'MAX TAXI N1',
+                    },
+                    {
+                      type: 'input',
+                      key: 'percentage',
+                      unit: '%',
+                      value: '',
+                    },
+                  ],
+                },
+              ],
               checkbox: {
                 list: [],
                 checked: [],
@@ -2489,7 +2811,20 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0212',
+                    text: 'MAX机坪',
+                  },
+                  {
+                    code: 'R0213',
+                    text: 'MAX转弯',
+                  },
+                  {
+                    code: 'R0214',
+                    text: 'MAX直线',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2500,7 +2835,23 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [],
+              inputs: [
+                {
+                  code: 'R0215',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '打滑时地速值：',
+                    },
+                    {
+                      type: 'input',
+                      key: 'KT',
+                      unit: 'KT',
+                      value: '',
+                    },
+                  ],
+                },
+              ],
               checkbox: {
                 list: [],
                 checked: [],
@@ -2515,7 +2866,16 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0216',
+                    text: '持续带刹车控制滑行速度',
+                  },
+                  {
+                    code: 'R0217',
+                    text: '接近30KT一次刹车降至低速',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2560,7 +2920,32 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0220',
+                    text: '持续滑行',
+                  },
+                  {
+                    code: 'R0221',
+                    text: '滑行中交接飞机',
+                  },
+                  {
+                    code: 'R0222',
+                    text: '停住飞机',
+                  },
+                  {
+                    code: 'R0223',
+                    text: 'PF更改CDU',
+                  },
+                  {
+                    code: 'R0224',
+                    text: 'PM更改CDU',
+                  },
+                  {
+                    code: 'R0225',
+                    text: '移动中同时埋头舱内',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2601,7 +2986,24 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0236',
+                    text: '仅WX',
+                  },
+                  {
+                    code: 'R0237',
+                    text: '仅TERRAIN',
+                  },
+                  {
+                    code: 'R0238',
+                    text: '均未打开',
+                  },
+                  {
+                    code: 'R0239',
+                    text: '对应亮度旋钮极暗',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2614,7 +3016,16 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0240',
+                    text: 'PF',
+                  },
+                  {
+                    code: 'R0241',
+                    text: 'PM',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2627,7 +3038,24 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0242',
+                    text: '五边',
+                  },
+                  {
+                    code: 'R0243',
+                    text: '跑道',
+                  },
+                  {
+                    code: 'R0244',
+                    text: '离场方向天气',
+                  },
+                  {
+                    code: 'R0245',
+                    text: '鸟群',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2666,7 +3094,16 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0248',
+                    text: '离地时刻',
+                  },
+                  {
+                    code: 'R0249',
+                    text: '达到光洁形态前',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2679,7 +3116,20 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0250',
+                    text: '增速光洁超过速度限制',
+                  },
+                  {
+                    code: 'R0251',
+                    text: '增速250KT超过速度限制',
+                  },
+                  {
+                    code: 'R0252',
+                    text: '管理构型遵守限制',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2744,9 +3194,30 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [],
+              inputs: [
+                {
+                  code: 'R0270',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '爬升率',
+                    },
+                    {
+                      type: 'input',
+                      key: 'FT/MIN',
+                      unit: 'FT/MIN',
+                      value: '',
+                    },
+                  ],
+                },
+              ],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0269',
+                    text: '触响TA“TRAFFIC”',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -2757,7 +3228,38 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [],
+              inputs: [
+                {
+                  code: 'R0271',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '最大爬升率',
+                    },
+                    {
+                      type: 'input',
+                      key: 'FT/MIN',
+                      unit: 'FT/MIN',
+                      value: '',
+                    },
+                  ],
+                },
+                {
+                  code: 'R0272',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '目标速度最大偏离±',
+                    },
+                    {
+                      type: 'input',
+                      key: 'FT/MIN',
+                      unit: 'FT/MIN',
+                      value: '',
+                    },
+                  ],
+                },
+              ],
               checkbox: {
                 list: [],
                 checked: [],
@@ -2880,7 +3382,38 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [],
+              inputs: [
+                {
+                  code: 'R0263',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '次数',
+                    },
+                    {
+                      type: 'input',
+                      key: 'count',
+                      unit: '',
+                      value: '',
+                    },
+                  ],
+                },
+                {
+                  code: 'R0264',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '高度',
+                    },
+                    {
+                      type: 'input',
+                      key: 'height',
+                      unit: '',
+                      value: '',
+                    },
+                  ],
+                },
+              ],
               checkbox: {
                 list: [],
                 checked: [],
@@ -2966,7 +3499,108 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [],
+              inputs: [
+                {
+                  code: 'R0274',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: 'OFP高度',
+                    },
+                    {
+                      type: 'input',
+                      key: 'OFPHeight',
+                      unit: '',
+                      value: '',
+                    },
+                  ],
+                },
+                {
+                  code: 'R0275',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '实际高度',
+                    },
+                    {
+                      type: 'input',
+                      key: 'actualHeight',
+                      unit: '',
+                      value: '',
+                    },
+                  ],
+                },
+                {
+                  code: 'R0276',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: 'OPT/RECM高度',
+                    },
+                    {
+                      type: 'input',
+                      key: 'OPTAndRECMHeight',
+                      unit: '',
+                      value: '',
+                    },
+                  ],
+                },
+                {
+                  code: 'R0277',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '机组申请',
+                    },
+                    {
+                      type: 'input',
+                      key: 'unitApplication',
+                      unit: '',
+                      value: '',
+                    },
+                  ],
+                },
+                {
+                  code: 'R0278',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: 'ATC提供最高',
+                    },
+                    {
+                      type: 'input',
+                      key: 'ATCProvideHighest',
+                      unit: '',
+                      value: '',
+                    },
+                  ],
+                },
+                {
+                  code: 'R0279',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '最高颠簸等级',
+                    },
+                    {
+                      type: 'input',
+                      key: 'maxJoltLevel',
+                      unit: '（ L / M / H ）',
+                      value: '',
+                    },
+                    {
+                      type: 'text',
+                      value: '时刻',
+                    },
+                    {
+                      type: 'input',
+                      key: 'moment',
+                      unit: '',
+                      value: '',
+                    },
+                  ],
+                },
+              ],
               checkbox: {
                 list: [],
                 checked: [],
@@ -2981,7 +3615,24 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0280',
+                    text: '未正确使用颠簸速度',
+                  },
+                  {
+                    code: 'R0280',
+                    text: '未正确使用等级信号',
+                  },
+                  {
+                    code: 'R0280',
+                    text: '未及时通知客舱',
+                  },
+                  {
+                    code: 'R0280',
+                    text: '安全带灯全程长亮',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -3018,7 +3669,23 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [],
+              inputs: [
+                {
+                  code: 'R0284',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '检查记录次数',
+                    },
+                    {
+                      type: 'input',
+                      key: 'count',
+                      unit: '',
+                      value: '',
+                    },
+                  ],
+                },
+              ],
               checkbox: {
                 list: [],
                 checked: [],
@@ -3046,7 +3713,20 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0286',
+                    text: '目的地',
+                  },
+                  {
+                    code: 'R0287',
+                    text: '目的地备降场',
+                  },
+                  {
+                    code: 'R0288',
+                    text: '长航线航路备降场',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -3057,7 +3737,38 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [],
+              inputs: [
+                {
+                  code: 'R0289',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '次数',
+                    },
+                    {
+                      type: 'input',
+                      key: 'count',
+                      unit: '',
+                      value: '',
+                    },
+                  ],
+                },
+                {
+                  code: 'R0290',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '时长',
+                    },
+                    {
+                      type: 'input',
+                      key: 'duration',
+                      unit: '',
+                      value: '',
+                    },
+                  ],
+                },
+              ],
               checkbox: {
                 list: [],
                 checked: [],
@@ -3070,7 +3781,38 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [],
+              inputs: [
+                {
+                  code: 'R0291',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '起飞后',
+                    },
+                    {
+                      type: 'input',
+                      key: 'afterTakeoffMIN',
+                      unit: 'MIN',
+                      value: '',
+                    },
+                  ],
+                },
+                {
+                  code: 'R0292',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: '着陆前',
+                    },
+                    {
+                      type: 'input',
+                      key: 'beforeLandingMIN',
+                      unit: 'MIN',
+                      value: '',
+                    },
+                  ],
+                },
+              ],
               checkbox: {
                 list: [],
                 checked: [],
@@ -3091,7 +3833,16 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0293',
+                    text: '下降前完成进近准备',
+                  },
+                  {
+                    code: 'R0294',
+                    text: '下降过程中执行进近准备',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -3104,7 +3855,16 @@ export const flightPhaseCheckItemInitData = [
             referenceItem: {
               inputs: [],
               checkbox: {
-                list: [],
+                list: [
+                  {
+                    code: 'R0293',
+                    text: '下降前完成进近简令',
+                  },
+                  {
+                    code: 'R0294',
+                    text: '下降过程中执行进近简令',
+                  },
+                ],
                 checked: [],
               },
             },
@@ -3115,7 +3875,23 @@ export const flightPhaseCheckItemInitData = [
             updateTime: '',
             remarks: [],
             referenceItem: {
-              inputs: [],
+              inputs: [
+                {
+                  code: 'R0215',
+                  fields: [
+                    {
+                      type: 'text',
+                      value: 'T/D前',
+                    },
+                    {
+                      type: 'input',
+                      key: 'NM',
+                      unit: 'NM',
+                      value: '',
+                    },
+                  ],
+                },
+              ],
               checkbox: {
                 list: [],
                 checked: [],
