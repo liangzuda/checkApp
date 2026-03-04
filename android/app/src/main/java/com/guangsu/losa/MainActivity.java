@@ -1,4 +1,4 @@
-package com.lzd.checkapp;
+package com.guangsu.losa;
 
 import com.getcapacitor.BridgeActivity;
 
