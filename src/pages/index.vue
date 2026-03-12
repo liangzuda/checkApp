@@ -1,6 +1,10 @@
 <script setup lang='ts'>
-import { showDialog, showSuccessToast } from 'vant'
+import { showDialog, showFailToast, showSuccessToast } from 'vant'
 import { useRouter } from 'vue-router'
+import { templateDataParsing } from '@/utils/templateDataParsing'
+import { queryLosaTemplate } from '@/api/index'
+
+import { resData } from '@/pages/check/mock'
 
 const router = useRouter()
 
@@ -48,7 +52,9 @@ function goCheckPage(id?: number) {
   }
 }
 
-function handleRemoveCheckList(id: number) {
+function handleRemoveCheckList(id: number, status: number) {
+  if (status === 1)
+    return showFailToast('已同步的记录无法删除')
   // 二次确认是否删除
   showDialog({
     message: '是否确认删除记录？',
@@ -65,6 +71,47 @@ function handleRemoveCheckList(id: number) {
 
     })
 }
+
+// 设置弹窗
+const showSetting = ref(false)
+const localStorageIpSetting = localStorage.getItem('ipSetting')
+// const ipSetting = ref(localStorageIpSetting || '192.168.10.51:443')
+const ipSetting = ref(localStorageIpSetting || '192.168.10.50:9201')
+
+function openSetting() {
+  showSetting.value = true
+}
+
+async function getLatestTemplate() {
+  try {
+    const response = await queryLosaTemplate(ipSetting.value || 'localhost:3000')
+    const res = response.data
+    // console.log('res', res)
+    if (res.code === 200) {
+      const jsonRenderData = templateDataParsing(res.data.templateInfoDTO)
+      // console.log('jsonRenderData', jsonRenderData)
+      const checkListTemplate = {
+        templateId: resData.templateInfoDTO.templateId,
+        templateData: jsonRenderData,
+      }
+      // 将模板数据存储到本地
+      localStorage.setItem('checkListTemplate', JSON.stringify(checkListTemplate))
+      showSuccessToast('获取成功')
+    }
+    else {
+      showFailToast(res.msg)
+    }
+  }
+  catch (error) {
+    // console.log(error)
+    showFailToast(`请求失败${error.code}`)
+  }
+}
+
+watch(ipSetting, () => {
+  // 将ipSetting保存到本地，下次打开时使用
+  localStorage.setItem('ipSetting', ipSetting.value)
+})
 </script>
 
 <template>
@@ -72,7 +119,10 @@ function handleRemoveCheckList(id: number) {
     <!-- 顶部导航栏 -->
     <div class="nav-bar px-2 flex items-center justify-between">
       <div>FLYNOTE 检查单</div>
-      <van-icon size="30" name="add-o" color="#409eff" @click="goCheckPage()" />
+      <div class="flex gap-4">
+        <van-icon size="30" name="setting-o" color="#409eff" @click="openSetting()" />
+        <van-icon size="30" name="add-o" color="#409eff" @click="goCheckPage()" />
+      </div>
     </div>
     <!-- tab栏 -->
     <div class="tabList py-4 bg-[#fff] flex items-center justify-center">
@@ -110,10 +160,10 @@ function handleRemoveCheckList(id: number) {
               <van-icon name="arrow" color="#999" size="18" />
             </div>
           </div>
-          <template v-if="item.status === 0" #right>
+          <template #right>
             <div
               class="px-2 flex h-full w-full items-center justify-center"
-              @click.stop="handleRemoveCheckList(item.id)"
+              @click.stop="handleRemoveCheckList(item.id, item.status)"
             >
               <van-icon name="delete-o" color="#ff0000" size="30px" />
             </div>
@@ -121,6 +171,33 @@ function handleRemoveCheckList(id: number) {
         </van-swipe-cell>
       </div>
     </div>
+    <!-- 设置弹窗 -->
+    <van-popup v-model:show="showSetting" class="setting-popup" round>
+      <!-- 弹出框顶部 -->
+      <div
+        class="px-4 py-2 b-t-1 b-[#bbb] b-solid bg-[#fff] flex max-h-[60vh] w-[90vw] items-center justify-between"
+      >
+        <div class="font-size-12px">
+          设置
+        </div>
+        <div class="flex gap-4 items-center">
+          <van-button size="small" @click="() => showSetting = false">
+            确定
+          </van-button>
+        </div>
+      </div>
+      <div class="setting-form-grid p-4 bg-[#f8f8f8] flex flex-col gap-2">
+        <div class="setting-form-item">
+          <span class="label">服务器ip：</span>
+          <van-field v-model="ipSetting" placeholder="请输入" inset class="input" />
+        </div>
+        <div class="flex justify-center">
+          <van-button size="small" color="#1989fa" @click="getLatestTemplate()">
+            获取最新模板
+          </van-button>
+        </div>
+      </div>
+    </van-popup>
   </div>
 </template>
 
@@ -157,6 +234,40 @@ function handleRemoveCheckList(id: number) {
   .placeholder {
     height: calc(100px + var(--safe-top));
     margin-bottom: 10px;
+  }
+
+  /* 设置弹窗 */
+  .setting-popup {
+    .setting-form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px 0;
+    }
+
+    .setting-form-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .label {
+      width: 80px;
+      text-align: right;
+      margin-right: 0px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .input {
+      flex: 1;
+      border: 1px solid #dcdfe6;
+      border-radius: 4px;
+      padding: 0 4px;
+      font-size: 14px;
+    }
+
+    .input::after {
+      display: none;
+    }
   }
 }
 </style>

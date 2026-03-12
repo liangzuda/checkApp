@@ -3,13 +3,15 @@ import { computed, reactive, ref } from 'vue'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import { showDialog, showToast } from 'vant'
-import { flightPhaseCheckItemInitData, mainRemarkInitData } from './data'
-import { accountOption, aircraftOption, airportList } from './options'
+import { flightPhaseCheckItemInitData, mainRemarkInitData } from './template'
+import { acrNumList, airportList } from './options'
 import { useRoute, useRouter } from 'vue-router'
+import { uploadTemplateFormatting } from '@/utils/uploadTemplateFormatting'
+import { uploadLosaTemplate } from '@/api/index'
 
 dayjs.extend(utc)
-const route = useRoute()
-const router = useRouter()
+const route = useRoute() // 获取路由信息
+const router = useRouter() // 获取路由实例
 
 // 防抖
 function debounce(fn, delay = 500) {
@@ -34,29 +36,37 @@ function generateRandomId() {
 // 如果url有携带id，则需要从本地储存匹配
 const checkListIdFromUrl = route.query.id
 const checkListData = JSON.parse(localStorage.getItem('checkListData') || '[]')
+const checkListTemplate = JSON.parse(localStorage.getItem('checkListTemplate') || '[]')
+const { templateId, templateData } = checkListTemplate
+// console.log('查看本地模板', templateId, templateData)
 const defaultData = {
   id: generateRandomId(), // 检查单id
+  templateId: templateId || 0, // 模板id
   status: 0, // 检查单状态 1已同步 0待同步
-  account: '张三(213658)', // 上传账号
+  account: localStorage.getItem('defaultAccount') || '', // 上传账号
   updateTime: '', // 更新时间
   flightInfo: {
     flightTimeText: '', // 航班时间
-    flightNo: 'A12345', // 航班号
-    aircraft: 'A320-200', // 飞机号
-    depAirport: 'apt_icao', // 起飞机场
-    arrAirport: 'apt_icao', // 到达机场
+    flightNo: '', // 航班号
+    aircraft: '', // 飞机号
+    depAirport: '', // 起飞机场
+    arrAirport: '', // 到达机场
   },
-  flightPhaseCheckItemData: deepClone(flightPhaseCheckItemInitData), // 阶段检查数据
+  flightPhaseCheckItemData: templateData || flightPhaseCheckItemInitData || [], // 阶段检查数据
   mainRemarkInitData: deepClone(mainRemarkInitData), // 备注数据
 }
+
 const tempData = reactive(
   checkListIdFromUrl
-    ? deepClone(checkListData.find(item => item.id === checkListIdFromUrl) || defaultData)
+    ? deepClone(checkListData.find(item => item.id === checkListIdFromUrl))
     : deepClone(defaultData),
 )
 
 // 如果检查单的状态为已同步，则页面为只读状态
 const onlyRead = tempData.status === 1
+
+// 账号信息
+const tempAccount = ref(tempData.account)
 
 // 返回历史记录页面
 function goBack() {
@@ -67,48 +77,73 @@ function goBack() {
 }
 
 // 同步检查单
-function handleSyncCheckList() {
-  if (!validationForm())
+async function handleSyncCheckList() {
+  if (!validationForm() || !validationAccount())
     return
   tempData.updateTime = `${dayjs().utc().format('YYYY-MM-DD HH:mm:ss')}Z`
-  // 同步成功后，将状态改为已同步
-  tempData.status = 1
-  // 模拟同步成功
-  showDialog({ title: '提示', message: '同步成功' }).then(() => {
-    setTimeout(() => router.push('/'), 500)
-  })
-}
 
-// 账号信息
-const tempAccount = ref(tempData.account)
+  const syncData = uploadTemplateFormatting(tempData)
+  // console.log('上传数据', syncData)
+
+  const localStorageIpSetting = localStorage.getItem('ipSetting') || 'localhost:3000'
+  try {
+    const response = await uploadLosaTemplate(localStorageIpSetting, syncData)
+    const res = response.data
+    if (res.code === 200) {
+      showToast({
+        message: '同步成功',
+        type: 'success',
+      })
+      tempData.status = 1
+      setTimeout(() => router.push('/'), 500)
+    }
+    else {
+      showToast({
+        message: res.msg,
+        type: 'fail',
+      })
+    }
+  }
+  catch (err) {
+    showToast({
+      message: `同步失败${err}`,
+      type: 'fail',
+    })
+  }
+}
 
 // 是否展示航班信息
 const showFlightInfo = ref(true)
 
 // 航班信息
-const form = reactive(tempData.flightInfo)
+const flightInfoForm = reactive(tempData.flightInfo)
 
 // 航班时间
 const showTimePicker = ref(false) // 时间选择器显示
 const activeTabTimePicker = ref(0) // 选择器tab切换
 // 默认值回显
-form.flightTimeText = `${dayjs().utc().format('YYYY-MM-DD')}`
+flightInfoForm.flightTimeText = `${dayjs().utc().format('YYYY-MM-DD')}`
 const currentDate = ref([dayjs().utc().format('YYYY'), dayjs().utc().format('MM'), dayjs().utc().format('DD')]) // 日期
 
 // 航班时间选择
 function onTimeConfirm() {
-  // form.flightTimeText = `${dayjs(`${currentDate.value.join('-')} ${currentTime.value.join(':')}`).format('YYYY-MM-DD HH:mm:ss')}Z`
-  form.flightTimeText = `${dayjs(`${currentDate.value.join('-')}`).format('YYYY-MM-DD')}`
+  // flightInfoForm.flightTimeText = `${dayjs(`${currentDate.value.join('-')} ${currentTime.value.join(':')}`).format('YYYY-MM-DD HH:mm:ss')}Z`
+  flightInfoForm.flightTimeText = `${dayjs(`${currentDate.value.join('-')}`).format('YYYY-MM-DD')}`
   showTimePicker.value = false
 }
 
 /* ===== 可输入下拉 ===== */
 const showDropdown = ref(false) // 下拉显示
 const optionSearch = ref('') // 搜索内容
-const currentField = ref<'aircraft' | 'dep' | 'arr' | 'account'>('aircraft') // 当前输入字段
-const currentFieldCn = ref<'飞机号' | '起飞机场' | '到达机场' | '账号'>('飞机号') // 当前输入字段中文
+const currentField = ref<'aircraft' | 'dep' | 'arr'>('aircraft') // 当前输入字段
+const currentFieldCn = ref<'飞机号' | '起飞机场' | '到达机场'>('飞机号') // 当前输入字段中文
 
 const airportOption = airportList.map(item => ({
+  label: item.aptIcao,
+  value: item.aptIcao,
+}))
+
+const aircraftOption = acrNumList.map(item => ({
   label: item,
   value: item,
 }))
@@ -120,8 +155,6 @@ const options = {
   dep: airportOption,
   // 到达机场
   arr: airportOption,
-  // 账号
-  account: accountOption,
 }
 
 // 搜索结果
@@ -203,53 +236,53 @@ function openArr() {
   currentFieldCn.value = '到达机场'
   openDropdown()
 }
-// 账号popup选择
-function openAccount() {
-  currentField.value = 'account'
-  currentFieldCn.value = '账号'
-  openDropdown()
-}
 
 // 选择,根据当前字段赋值
 function onSelect(val: string) {
   if (currentField.value === 'aircraft')
-    form.aircraft = val
+    flightInfoForm.aircraft = val
   if (currentField.value === 'dep')
-    form.depAirport = val
+    flightInfoForm.depAirport = val
   if (currentField.value === 'arr')
-    form.arrAirport = val
-  if (currentField.value === 'account')
-    tempAccount.value = val
+    flightInfoForm.arrAirport = val
   showDropdown.value = false
 }
 
 // 左上角航班信息
 const titleText = computed(() => {
   const defaultTitle = ''
-  const mmdd = `${dayjs(form.flightTimeText).format('MM-DD')}`
-  const flightInfoTitle = `${mmdd} ${form.flightNo} ${form.aircraft} ${form.depAirport}-${form.arrAirport}`
+  const mmdd = `${dayjs(flightInfoForm.flightTimeText).format('MM-DD')}`
+  const flightInfoTitle = `${mmdd} ${flightInfoForm.flightNo} ${flightInfoForm.aircraft} ${flightInfoForm.depAirport}-${flightInfoForm.arrAirport}`
   return showFlightInfo.value ? defaultTitle : flightInfoTitle
 })
 
 function validationForm() {
-  if (!form.flightTimeText) {
+  if (!flightInfoForm.flightTimeText) {
     showToast('请选择航班时间')
     return false
   }
-  if (!form.flightNo) {
+  if (!flightInfoForm.flightNo) {
     showToast('请输入航班号')
     return false
   }
-  if (!form.aircraft) {
+  if (!flightInfoForm.aircraft) {
     showToast('请选择飞机号')
     return false
   }
-  if (!form.depAirport) {
+  if (!flightInfoForm.depAirport) {
     showToast('请选择起飞机场')
     return false
   }
-  if (!form.arrAirport) {
+  if (!flightInfoForm.arrAirport) {
     showToast('请选择到达机场')
+    return false
+  }
+  return true
+}
+
+function validationAccount() {
+  if (!tempAccount.value || !tempAccount.value?.length) {
+    showToast('请输入账号')
     return false
   }
   return true
@@ -335,7 +368,7 @@ const showCheckListExecution = ref(false) // popup显示
 const checkListExecutionData = activeCheckListExecution // 检查单执行选择和渲染数据
 const checkedListExecutionCount = computed(() => { // 选择的大项数
   let count = 0
-  checkListExecutionData.value.forEach((item) => {
+  checkListExecutionData.value.checkList?.forEach((item) => {
     if (item.checked.length)
       count++
   })
@@ -346,7 +379,7 @@ const showCockpitIntegrity = ref(false) // popup显示
 const cockpitIntegrityData = activeCockpitIntegrity // 驾驶舱整肃性选择和渲染数据
 const cockpitIntegrityCount = computed(() => { // 选择的大项数
   let count = 0
-  cockpitIntegrityData.value.forEach((item) => {
+  cockpitIntegrityData.value.checkList?.forEach((item) => {
     if (item.checked)
       count++
   })
@@ -375,14 +408,16 @@ const temCount = computed(() => { // 总触发次数
 
 // 打开检查单执行
 function handleOpenCheckListExecution() {
-  showCheckListExecution.value = true
+  if (checkListExecutionData.value.checkList?.length)
+    showCheckListExecution.value = true
+  else showToast('该阶段无检查单执行')
 }
 
 // 打开驾驶舱整肃性
 function handleOpenCockpitIntegrity() {
-  if (cockpitIntegrityData.value?.length)
+  if (cockpitIntegrityData.value.checkList?.length)
     showCockpitIntegrity.value = true
-  else showToast('航前准备阶段无整肃性')
+  else showToast('该阶段无整肃性')
 }
 
 // 打开TEM
@@ -566,7 +601,11 @@ watch(
   },
   { deep: true },
 )
-watch(tempAccount, autoSave)
+watch(tempAccount, () => {
+  autoSave()
+  // 将tempAccount保存到本地，下次打开页面时使用
+  localStorage.setItem('defaultAccount', tempAccount.value)
+})
 watch(flightPhaseCheckItemData, autoSave, { deep: true })
 </script>
 
@@ -615,73 +654,76 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
           同步账号：{{ tempData.account }}
         </div>
       </div>
-      <div class="form-grid">
+      <div class="flight-info-form-grid">
         <!-- 航班时间 -->
-        <div class="form-item">
+        <div class="flight-info-form-item">
           <!-- <span class="label">航班时间：</span> -->
           <span class="label">航班日期：</span>
           <template v-if="!onlyRead">
-            <van-field v-model="form.flightTimeText" readonly inset class="input" @click="showTimePicker = true" />
+            <van-field
+              v-model="flightInfoForm.flightTimeText" readonly inset class="input"
+              @click="showTimePicker = true"
+            />
           </template>
           <template v-else>
-            {{ form.flightTimeText }}
+            {{ flightInfoForm.flightTimeText }}
           </template>
         </div>
 
         <!-- 航班号 -->
-        <div class="form-item">
+        <div class="flight-info-form-item">
           <span class="label">航班号：</span>
           <template v-if="!onlyRead">
-            <van-field v-model="form.flightNo" placeholder="请输入" inset class="input" />
+            <van-field v-model="flightInfoForm.flightNo" placeholder="请输入" inset class="input" />
           </template>
           <template v-else>
-            {{ form.flightNo }}
+            {{ flightInfoForm.flightNo }}
           </template>
         </div>
 
         <!-- 飞机号 -->
-        <div class="form-item">
+        <div class="flight-info-form-item">
           <span class="label">飞机号：</span>
           <template v-if="!onlyRead">
             <van-field
-              v-model="form.aircraft" placeholder="可输入" is-link inset class="input" readonly
+              v-model="flightInfoForm.aircraft" placeholder="可输入" is-link inset class="input" readonly
               @focus="openAircraft"
             />
           </template>
           <template v-else>
-            {{ form.aircraft }}
+            {{ flightInfoForm.aircraft }}
           </template>
         </div>
 
         <!-- 起飞机场 -->
-        <div class="form-item">
+        <div class="flight-info-form-item">
           <span class="label">起飞机场：</span>
           <template v-if="!onlyRead">
             <van-field
-              v-model="form.depAirport" placeholder="可输入" is-link inset class="input" readonly
+              v-model="flightInfoForm.depAirport" placeholder="可输入" is-link inset class="input" readonly
               @focus="openDep"
             />
           </template>
           <template v-else>
-            {{ form.depAirport }}
+            {{ flightInfoForm.depAirport }}
           </template>
         </div>
 
         <!-- 着陆机场 -->
-        <div class="form-item">
+        <div class="flight-info-form-item">
           <span class="label">着陆机场：</span>
           <template v-if="!onlyRead">
             <van-field
-              v-model="form.arrAirport" placeholder="可输入" is-link inset class="input" readonly
+              v-model="flightInfoForm.arrAirport" placeholder="可输入" is-link inset class="input" readonly
               @focus="openArr"
             />
           </template>
           <template v-else>
-            {{ form.arrAirport }}
+            {{ flightInfoForm.arrAirport }}
           </template>
         </div>
 
-        <div v-if="!onlyRead" class="form-item flex justify-end">
+        <div v-if="!onlyRead" class="flight-info-form-item flex justify-end">
           <VanButton size="small" color="#70b603" @click="() => { if (validationForm()) showFlightInfo = false }">
             确定
           </VanButton>
@@ -708,14 +750,17 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
                 {{ programExecutionCount }}
               </div>
             </div>
-            <div class="pop-button emphasis-style" @click="handleOpenCheckListExecution">
+            <div
+              class="pop-button emphasis-style" :class="checkListExecutionData.checkList?.length ? '' : 'opacity-50'"
+              @click="handleOpenCheckListExecution"
+            >
               检查单执行
               <div v-show="checkedListExecutionCount" class="circle">
                 {{ checkedListExecutionCount }}
               </div>
             </div>
             <div
-              class="pop-button weaken-style" :class="cockpitIntegrityData?.length ? '' : 'opacity-50'"
+              class="pop-button weaken-style" :class="cockpitIntegrityData.checkList?.length ? '' : 'opacity-50'"
               @click="handleOpenCockpitIntegrity"
             >
               驾驶舱整肃性
@@ -836,15 +881,13 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
 
     <!-- 备注 固定悬浮按钮 -->
     <van-floating-bubble
-      class="opacity-50" axis="xy" magnetic="x" :gap="{ x: 24, y: 48 }"
-      icon="records-o" @click.stop="() => handleOpenRemark()"
+      class="opacity-50" axis="xy" magnetic="x" :gap="{ x: 24, y: 48 }" icon="records-o"
+      @click.stop="() => handleOpenRemark()"
     />
     <!-- 备注 弹出框 -->
     <van-popup v-model:show="showRemark" class="my-floating-panel" round>
       <!-- 弹出框顶部 -->
-      <div
-        class="px-4 py-2 b-t-1 b-[#bbb] rounded-t-[10px] b-solid bg-[#fff] flex max-h-[60vh] w-[90vw] shadow-[0_0_10px_rgba(0,0,0,0.1)] items-center justify-between"
-      >
+      <div class="px-4 py-2 b-t-1 b-[#bbb] b-solid bg-[#fff] flex max-h-[60vh] w-[90vw] items-center justify-between">
         <div class="font-size-12px w-[65%] text-nowrap text-ellipsis overflow-hidden" :title="remarkTitle">
           {{ remarkTitle }}
         </div>
@@ -858,9 +901,9 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
         </div>
       </div>
       <!-- 弹出框内容 -->
-      <div class="px-2 pb-4 pt-2 bg-[#f8f8f8] h-full">
+      <div class="p-2 bg-[#f8f8f8] flex flex-col gap-2">
         <!-- 编辑区 -->
-        <div v-show="!onlyRead" class="font-size-14px p-2 rounded-t-[10px] bg-[#fff] shadow-[0_0_10px_rgba(0,0,0,0.1)]">
+        <div v-show="!onlyRead" class="font-size-14px p-2 rounded-t-[10px] bg-[#fff]">
           <van-field
             ref="remarkInput" v-model="tempRemark" rows="2" autosize type="textarea" maxlength="200"
             placeholder="请输入备注" show-word-limit
@@ -877,10 +920,14 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
             </div>
           </div>
         </div>
+        <!-- 空白提示 -->
+        <div v-if="onlyRead && remarkList?.length === 0" class="font-size-14px c-[#999] text-center">
+          无备注内容
+        </div>
         <!-- 参考项区 -->
         <div
           v-if="tempReferenceItem?.inputs?.length > 0 || tempReferenceItem?.checkbox?.list?.length > 0"
-          class="font-size-12px mt-2 p-4 rounded-[10px] bg-[#fff] flex flex-col gap-2"
+          class="font-size-12px p-4 rounded-[10px] bg-[#fff] flex flex-col gap-2"
         >
           <!-- 填空类型 -->
           <div v-for="input in tempReferenceItem.inputs" :key="input" class="reference-item-input">
@@ -893,21 +940,23 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
               <!-- 输入框 -->
               <template v-else>
                 <van-field v-model="item.value" class="input" input-align="center" :disabled="onlyRead" />
-                <span class="mr-2">{{ item.unit }}</span>
               </template>
             </template>
           </div>
           <!-- 复选类型 -->
-          <van-checkbox-group v-model="tempReferenceItem.checkbox.checked" shape="square" :disabled="onlyRead" class="flex flex-col gap-2">
-            <van-checkbox v-for="item in tempReferenceItem.checkbox.list" :key="item" :name="item.code">
+          <van-checkbox-group
+            v-model="tempReferenceItem.checkbox.checked" shape="square" :disabled="onlyRead"
+            class="flex flex-col gap-2"
+          >
+            <van-checkbox v-for="item in tempReferenceItem.checkbox.list" :key="item.code" :name="item.code">
               {{ item.text }}
             </van-checkbox>
           </van-checkbox-group>
         </div>
         <!-- 展示区 -->
-        <div class="max-h-[40vh] min-h-[2vh] overflow-y-auto">
-          <div v-for="item, index in remarkList" :key="index" class="mt-2">
-            <div class="font-size-14px p-2 rounded-[10px] bg-[#fff] shadow-[0_0_10px_rgba(0,0,0,0.1)]">
+        <div class="flex flex-col gap-2 max-h-[40vh] overflow-y-auto">
+          <div v-for="item, index in remarkList" :key="index">
+            <div class="font-size-14px p-2 rounded-[10px] bg-[#fff]">
               <div class="flex items-center justify-between">
                 <div class="c-[#999]">
                   {{ dayjs(item.updateTime).utc().format('YYYY/MM/DD HH:mm:ss[Z]') }}
@@ -937,7 +986,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
         </div>
       </div>
       <div class="popup-scroll p-2 bg-[#f9f9f9] h-[60vh]">
-        <div v-for="item, index in checkListExecutionData" :key="index">
+        <div v-for="item, index in checkListExecutionData.checkList" :key="index">
           <div class="randed-[10px] font-size-16px font-bold p-2 bg-[#fff] shadow-[0_0_10px_rgba(0,0,0,0.1)]">
             {{ `${Number(index) + 1}、${item.name}` }}
           </div>
@@ -967,7 +1016,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
         </div>
       </div>
       <div class="p-2 bg-[#f9f9f9]">
-        <div v-for="item, index in cockpitIntegrityData" :key="index">
+        <div v-for="item, index in cockpitIntegrityData.checkList" :key="index">
           <div
             class="randed-[10px] font-size-14px mb-4 p-2 b-1 b-solid shadow-[0_0_10px_rgba(0,0,0,0.1)]"
             :class="item.checked ? 'bg-[#ecf5ff] c-[#007aff]  b-[#b8daff]' : 'bg-[#fff] b-[#fff]'"
@@ -1018,10 +1067,8 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
                     v-for="subItem, subIndex in item.subItems" :key="subIndex"
                     class="mb-4 p-2 b-1 b-solid flex select-none shadow-[0_0_10px_rgba(0,0,0,0.1)] items-center justify-between position-relative"
                     :class="subItem.triggerCount ? 'bg-[#fdf6ec] b-[#f5dcb5]' : 'bg-[#f2f2f2] b-[#99999945]'"
-                    @click="handleClickTemSubItem(subItem)"
-                    @touchstart="onTouchStartTemSubItem(subItem)"
-                    @touchend="onTouchEndTemSubItem"
-                    @touchmove="onTouchCancelTemSubItem"
+                    @click="handleClickTemSubItem(subItem)" @touchstart="onTouchStartTemSubItem(subItem)"
+                    @touchend="onTouchEndTemSubItem" @touchmove="onTouchCancelTemSubItem"
                   >
                     <div class="c-[#000]">
                       {{ subItem.name }}
@@ -1149,50 +1196,53 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
           </div>
           <!-- 航班信息 -->
           <div class="flight-info py-2 pr-2 bg-[#f2f2f2]">
-            <div class="form-grid">
+            <div class="flight-info-form-grid">
               <!-- 航班时间 -->
-              <div class="form-item">
+              <div class="flight-info-form-item">
                 <!-- <span class="label">航班时间：</span> -->
                 <span class="label">航班日期：</span>
-                <van-field v-model="form.flightTimeText" readonly inset class="input" @click="showTimePicker = true" />
+                <van-field
+                  v-model="flightInfoForm.flightTimeText" readonly inset class="input"
+                  @click="showTimePicker = true"
+                />
               </div>
 
               <!-- 航班号 -->
-              <div class="form-item">
+              <div class="flight-info-form-item">
                 <span class="label">航班号：</span>
-                <van-field v-model="form.flightNo" placeholder="请输入" inset class="input" />
+                <van-field v-model="flightInfoForm.flightNo" placeholder="请输入" inset class="input" />
               </div>
 
               <!-- 飞机号 -->
-              <div class="form-item">
+              <div class="flight-info-form-item">
                 <span class="label">飞机号：</span>
                 <van-field
-                  v-model="form.aircraft" placeholder="可输入" is-link inset class="input" readonly
+                  v-model="flightInfoForm.aircraft" placeholder="可输入" is-link inset class="input" readonly
                   @focus="openAircraft"
                 />
               </div>
 
               <!-- 起飞机场 -->
-              <div class="form-item">
+              <div class="flight-info-form-item">
                 <span class="label">起飞机场：</span>
                 <van-field
-                  v-model="form.depAirport" placeholder="可输入" is-link inset class="input" readonly
+                  v-model="flightInfoForm.depAirport" placeholder="可输入" is-link inset class="input" readonly
                   @focus="openDep"
                 />
               </div>
 
               <!-- 着陆机场 -->
-              <div class="form-item">
+              <div class="flight-info-form-item">
                 <span class="label">着陆机场：</span>
                 <van-field
-                  v-model="form.arrAirport" placeholder="可输入" is-link inset class="input" readonly
+                  v-model="flightInfoForm.arrAirport" placeholder="可输入" is-link inset class="input" readonly
                   @focus="openArr"
                 />
               </div>
             </div>
           </div>
         </div>
-        <div class="">
+        <div>
           <div class="font-size-14px p-2 bg-[#fff] shadow-[0_0_10px_rgba(0,0,0,0.1)]">
             同步账号
           </div>
@@ -1200,12 +1250,9 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
           <div class="py-2 pr-2 bg-[#f2f2f2]">
             <div class="flight-info py-2 pr-2 bg-[#f2f2f2]">
               <!-- 账号 -->
-              <div class="form-item">
+              <div class="flight-info-form-item">
                 <span class="label">账号：</span>
-                <van-field
-                  v-model="tempAccount" placeholder="可输入" is-link inset class="input" readonly
-                  @focus="openAccount"
-                />
+                <van-field v-model="tempAccount" placeholder="请输入工号" inset type="number" class="input" />
               </div>
             </div>
           </div>
@@ -1236,9 +1283,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
         <van-field v-model="optionSearch" placeholder="输入筛选" clearable />
         <div ref="scrollContainer" class="h-[30vh] overflow-y-auto">
           <van-list
-            v-model:loading="optionLoading"
-            :finished="optionFinished"
-            finished-text="没有更多了"
+            v-model:loading="optionLoading" :finished="optionFinished" finished-text="没有更多了"
             @load="onLoadOptionList"
           >
             <van-cell
@@ -1292,13 +1337,13 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
   }
 
   .flight-info {
-    .form-grid {
+    .flight-info-form-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px 0;
     }
 
-    .form-item {
+    .flight-info-form-item {
       display: flex;
       align-items: center;
     }
@@ -1365,9 +1410,10 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
 
     .reference-item-input {
       display: flex;
+      flex-wrap: wrap;
 
       .input {
-        width: 60px;
+        width: 40px;
         border-bottom: 1px solid #000;
         padding: 0 4px;
         font-size: 12px;
@@ -1439,9 +1485,12 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
 
   .popup-scroll {
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch; /* 原生动量滚动 */
-    -ms-overflow-style: none; /* IE/Edge */
-    overscroll-behavior: contain; /* 防止穿透 */
+    -webkit-overflow-scrolling: touch;
+    /* 原生动量滚动 */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+    overscroll-behavior: contain;
+    /* 防止穿透 */
   }
 }
 </style>

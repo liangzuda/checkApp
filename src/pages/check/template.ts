@@ -3,8 +3,8 @@ const programExecutionInitData = [
   {
     name: '通讯',
     subItems: [
-      { name: 'PM边通讯边调频', triggerCount: 0 },
-      { name: 'PM调频完成后双方未证实', triggerCount: 0 },
+      { id: 2, name: 'PM边通讯边调频', triggerCount: 0 },
+      { id: 3, name: 'PM调频完成后双方未证实', triggerCount: 0 },
       { name: 'PM预调除离场频率以外的频率', triggerCount: 0 },
       { name: 'PM未完整复诵ATC指令', triggerCount: 0 },
     ],
@@ -39,120 +39,151 @@ interface checkListExecutionType {
   name: string
   checked: string[]
   children: string[]
+  id: number
+  childrenId: number[]
 }
 // 检查单执行
-const checkListExecutionInitData: checkListExecutionType[] = [
-  {
-    name: '检查单执行时机',
-    checked: [],
-    children: [
-      '存在时间压力',
-      'ATC通信干扰',
-      '勤务客舱干扰',
-      '飞行状态不稳定',
-    ],
-  },
-  {
-    name: '检查单执行状态',
-    checked: [],
-    children: [
-      '未专注认读',
-      '未专注听取',
-      '私人事务干扰',
-    ],
-  },
-  {
-    name: '检查单执行角色',
-    checked: [],
-    children: [
-      'PM认读-PF检查',
-      'PM认读-PM检查',
-      'PF检查-PM认读',
-      '观察员认读',
-    ],
-  },
-  {
-    name: '检查单条目定位准确性',
-    checked: [],
-    children: [
-      '逐一定位认读',
-      '未逐一定位',
-      '背诵检查单',
-      '未执行',
-    ],
-  },
-  {
-    name: '检查单朗读清晰度',
-    checked: [],
-    children: [
-      '清晰',
-      '不清晰',
-      '使用标准术语',
-      '非标准术语',
-    ],
-  },
-  {
-    name: '检查单项目确认落实',
-    checked: [],
-    children: [
-      '按角色确认落实',
-      '仅PF确认落实',
-      '仅PM确认落实',
-      '观察员确认落实',
-    ],
-  },
-]
+const checkListExecutionInitData: { id: number, checkList: checkListExecutionType[] } = {
+  id: 178,
+  checkList: [
+    {
+      name: '检查单执行时机',
+      checked: [],
+      children: [
+        '存在时间压力',
+        'ATC通信干扰',
+        '勤务客舱干扰',
+        '飞行状态不稳定',
+      ],
+      id: 1030,
+      childrenId: [3535, 3536, 3537, 3538],
+    },
+    {
+      name: '检查单执行状态',
+      checked: [],
+      children: [
+        '未专注认读',
+        '未专注听取',
+        '私人事务干扰',
+      ],
+      id: 1031,
+      childrenId: [3539, 3540, 3541],
+    },
+    {
+      name: '检查单执行角色',
+      checked: [],
+      children: [
+        'PM认读-PF检查',
+        'PM认读-PM检查',
+        'PF检查-PM认读',
+        '观察员认读',
+      ],
+      id: 1032,
+      childrenId: [3542, 3543, 3544, 3545],
+    },
+    {
+      name: '检查单条目定位准确性',
+      checked: [],
+      children: [
+        '逐一定位认读',
+        '未逐一定位',
+        '背诵检查单',
+        '未执行',
+      ],
+      id: 1033,
+      childrenId: [3546, 3547, 3548, 3549],
+    },
+    {
+      name: '检查单朗读清晰度',
+      checked: [],
+      children: [
+        '清晰',
+        '不清晰',
+        '使用标准术语',
+        '非标准术语',
+      ],
+      id: 1034,
+      childrenId: [3550, 3551, 3552, 3553],
+    },
+    {
+      name: '检查单项目确认落实',
+      checked: [],
+      children: [
+        '按角色确认落实',
+        '仅PF确认落实',
+        '仅PM确认落实',
+        '观察员确认落实',
+      ],
+      id: 1035,
+      childrenId: [3554, 3555, 3556, 3557],
+    },
+  ],
+}
 
 // 驾驶舱整肃性
-const cockpitIntegrityInitData = [
-  {
-    name: '操纵装置遮碍',
-    checked: false,
-  },
-  {
-    name: '中央操纵台遮碍',
-    checked: false,
-  },
-  {
-    name: '断路器面板遮碍',
-    checked: false,
-  },
-  {
-    name: '氧气面罩遮碍',
-    checked: false,
-  },
-  {
-    name: '各风挡视线遮碍',
-    checked: false,
-  },
-  {
-    name: '通过中央操纵台上方传递餐饮',
-    checked: false,
-  },
-  {
-    name: 'PF+PM同时用餐',
-    checked: false,
-  },
-  {
-    name: '飞行关键阶段玻璃容器未收起',
-    checked: false,
-  },
-  {
-    name: '注意力分散其他',
-    checked: false,
-  },
-]
+const cockpitIntegrityInitData = {
+  id: 980,
+  checkList: [
+    {
+      id: 3465,
+      name: '操纵装置遮碍',
+      checked: false,
+    },
+    {
+      id: 3466,
+      name: '中央操纵台遮碍',
+      checked: false,
+    },
+    {
+      id: 3467,
+      name: '断路器面板遮碍',
+      checked: false,
+    },
+    {
+      id: 3468,
+      name: '氧气面罩遮碍',
+      checked: false,
+    },
+    {
+      id: 3469,
+      name: '各风挡视线遮碍',
+      checked: false,
+    },
+    {
+      id: 3470,
+      name: '通过中央操纵台上方传递餐饮',
+      checked: false,
+    },
+    {
+      id: 3471,
+      name: 'PF+PM同时用餐',
+      checked: false,
+    },
+    {
+      id: 3472,
+      name: '飞行关键阶段玻璃容器未收起',
+      checked: false,
+    },
+    {
+      id: 3473,
+      name: '注意力分散其他',
+      checked: false,
+    },
+  ],
+}
 
 // TEM Threat & Error Management 威胁与错误管理
 const temInitData = [
   {
+    id: 1,
     category: '操纵差错',
     items: [
       {
+        id: 2,
         name: '人工飞行/飞行操纵',
         subItems: [
-          { name: '非故意的横向偏差', triggerCount: 0 },
-          { name: '非故意的高度偏差', triggerCount: 0 },
+          { id: 3, name: '非故意的横向偏差', triggerCount: 0 },
+          { id: 4, name: '非故意的高度偏差', triggerCount: 0 },
           { name: '非故意的速度偏差', triggerCount: 0 },
           { name: '不正确的襟翼设定', triggerCount: 0 },
           { name: '不正确的减速板设定', triggerCount: 0 },
@@ -618,8 +649,6 @@ export const flightPhaseCheckItemInitData = [
                     },
                     {
                       type: 'input',
-                      key: 'windDirection',
-                      unit: '',
                       value: '',
                     },
                     {
@@ -628,9 +657,11 @@ export const flightPhaseCheckItemInitData = [
                     },
                     {
                       type: 'input',
-                      key: 'windSpeed',
-                      unit: 'KT',
                       value: '',
+                    },
+                    {
+                      type: 'text',
+                      value: 'KT',
                     },
                   ],
                 },
