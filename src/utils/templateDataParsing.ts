@@ -50,6 +50,7 @@ function convertCheckbox(checkBoxRefList) {
 
 // 处理驾驶舱整肃性数据
 function processCockpitIntegrityData(cockpitIntegrity) {
+  const checkMainId = cockpitIntegrity?.[0]?.id
   const itemList = cockpitIntegrity?.[0]?.itemList || []
   const checkBoxRefList = itemList?.[0]?.checkBoxRefList || []
   const cockpitIntegrityData = checkBoxRefList.map(item => ({
@@ -58,6 +59,7 @@ function processCockpitIntegrityData(cockpitIntegrity) {
     checked: false,
   }))
   return {
+    checkMainId,
     id: itemList?.[0]?.id,
     checkList: cockpitIntegrityData,
   }
@@ -198,10 +200,12 @@ export function templateDataParsing(templateInfoDTO) {
 
     const flightPhaseChecklistObjectItems = checkItemData.map((checkItem) => {
       return {
+        id: checkItem.id,
         name: checkItem.checkName,
         updateTime: '',
         details: checkItem.itemList.map((subItem) => {
           return {
+            id: subItem.id,
             content: subItem.itemName,
             status: 1, // 1:已执行 2:未执行  默认已执行
             updateTime: '',

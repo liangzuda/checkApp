@@ -7,6 +7,11 @@ const config: CapacitorConfig = {
   server: {
     cleartext: true, // Allow http://localhost:8080
   },
+  plugins: {
+    CapacitorHttp: {
+      enabled: true,
+    },
+  },
 }
 
 export default config

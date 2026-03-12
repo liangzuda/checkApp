@@ -76,16 +76,20 @@ function goBack() {
   router.push('/')
 }
 
+const syncLoading = ref(false)
 // 同步检查单
 async function handleSyncCheckList() {
   if (!validationForm() || !validationAccount())
     return
+
+  syncLoading.value = true
   tempData.updateTime = `${dayjs().utc().format('YYYY-MM-DD HH:mm:ss')}Z`
 
   const syncData = uploadTemplateFormatting(tempData)
-  // console.log('上传数据', syncData)
+  // eslint-disable-next-line no-console
+  console.log('上传数据', syncData)
 
-  const localStorageIpSetting = localStorage.getItem('ipSetting') || 'localhost:3000'
+  const localStorageIpSetting = localStorage.getItem('ipSetting') || '192.168.10.50:9201'
   try {
     const response = await uploadLosaTemplate(localStorageIpSetting, syncData)
     const res = response.data
@@ -95,7 +99,7 @@ async function handleSyncCheckList() {
         type: 'success',
       })
       tempData.status = 1
-      setTimeout(() => router.push('/'), 500)
+      setTimeout(() => router.push('/'), 1000)
     }
     else {
       showToast({
@@ -109,6 +113,9 @@ async function handleSyncCheckList() {
       message: `同步失败${err}`,
       type: 'fail',
     })
+  }
+  finally {
+    syncLoading.value = false
   }
 }
 
@@ -1181,7 +1188,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
           同步
         </div>
         <div class="flex gap-2 items-center">
-          <van-button size="small" color="#409eff" @click="handleSyncCheckList">
+          <van-button :loading="syncLoading" size="small" color="#409eff" @click="handleSyncCheckList">
             确定
           </van-button>
           <van-button size="small" @click="showSync = false">

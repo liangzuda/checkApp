@@ -4,8 +4,6 @@ import { useRouter } from 'vue-router'
 import { templateDataParsing } from '@/utils/templateDataParsing'
 import { queryLosaTemplate } from '@/api/index'
 
-import { resData } from '@/pages/check/mock'
-
 const router = useRouter()
 
 const checkListData = JSON.parse(localStorage.getItem('checkListData') || '[]').sort((a, b) => {
@@ -82,16 +80,20 @@ function openSetting() {
   showSetting.value = true
 }
 
+// 获取最新模板
+const getTemplateLoading = ref(false)
 async function getLatestTemplate() {
+  getTemplateLoading.value = true
   try {
     const response = await queryLosaTemplate(ipSetting.value || 'localhost:3000')
     const res = response.data
+    const { templateInfoDTO } = res.data
     // console.log('res', res)
     if (res.code === 200) {
-      const jsonRenderData = templateDataParsing(res.data.templateInfoDTO)
+      const jsonRenderData = templateDataParsing(templateInfoDTO)
       // console.log('jsonRenderData', jsonRenderData)
       const checkListTemplate = {
-        templateId: resData.templateInfoDTO.templateId,
+        templateId: templateInfoDTO.templateId,
         templateData: jsonRenderData,
       }
       // 将模板数据存储到本地
@@ -105,6 +107,9 @@ async function getLatestTemplate() {
   catch (error) {
     // console.log(error)
     showFailToast(`请求失败${error.code}`)
+  }
+  finally {
+    getTemplateLoading.value = false
   }
 }
 
@@ -192,7 +197,7 @@ watch(ipSetting, () => {
           <van-field v-model="ipSetting" placeholder="请输入" inset class="input" />
         </div>
         <div class="flex justify-center">
-          <van-button size="small" color="#1989fa" @click="getLatestTemplate()">
+          <van-button :loading="getTemplateLoading" size="small" color="#1989fa" @click="getLatestTemplate()">
             获取最新模板
           </van-button>
         </div>
