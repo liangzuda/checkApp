@@ -108,14 +108,15 @@ async function handleSyncCheckList() {
       })
     }
   }
+  // eslint-disable-next-line unused-imports/no-unused-vars
   catch (err) {
     showToast({
-      message: `同步失败${err}`,
+      message: `无法连接到服务器，请确认您已在授权网络环境中`,
       type: 'fail',
     })
   }
   finally {
-    syncLoading.value = false
+    setTimeout(() => syncLoading.value = false, 1000)
   }
 }
 

@@ -50,9 +50,10 @@ function goCheckPage(id?: number) {
   }
 }
 
-function handleRemoveCheckList(id: number, status: number) {
-  if (status === 1)
-    return showFailToast('已同步的记录无法删除')
+function handleRemoveCheckList(id: number) {
+  // if (status === 1)
+  //   return showFailToast('已同步的记录无法删除')
+
   // 二次确认是否删除
   showDialog({
     message: '是否确认删除记录？',
@@ -101,12 +102,13 @@ async function getLatestTemplate() {
       showSuccessToast('获取成功')
     }
     else {
-      showFailToast(res.msg)
+      showFailToast(`模版获取错误，${res.msg}`)
     }
   }
+  // eslint-disable-next-line unused-imports/no-unused-vars
   catch (error) {
     // console.log(error)
-    showFailToast(`请求失败${error.code}`)
+    showFailToast('无法连接到服务器，请确认您已在授权网络环境中')
   }
   finally {
     getTemplateLoading.value = false
@@ -168,7 +170,7 @@ watch(ipSetting, () => {
           <template #right>
             <div
               class="px-2 flex h-full w-full items-center justify-center"
-              @click.stop="handleRemoveCheckList(item.id, item.status)"
+              @click.stop="handleRemoveCheckList(item.id)"
             >
               <van-icon name="delete-o" color="#ff0000" size="30px" />
             </div>
