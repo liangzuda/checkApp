@@ -1163,7 +1163,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
           >
             -
           </div>
-          <van-field v-model="tempTemSubItemCount" class="dialogInput" type="number" inset input-align="center" />
+          <van-field v-model="tempTemSubItemCount" class="dialogInput" type="digit" inset input-align="center" />
           <div
             class="c-[#f59a23] line-height-40px ml-10px text-center b-1 b-[#f59a23] rounded-5px b-solid bg-[#fdf6ec] h-40px w-40px"
             @click="() => tempTemSubItemCount++"
@@ -1260,7 +1260,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
               <!-- 账号 -->
               <div class="flight-info-form-item">
                 <span class="label">账号：</span>
-                <van-field v-model="tempAccount" placeholder="请输入工号" inset type="number" class="input" />
+                <van-field v-model="tempAccount" placeholder="请输入工号" inset type="digit" class="input" />
               </div>
             </div>
           </div>
