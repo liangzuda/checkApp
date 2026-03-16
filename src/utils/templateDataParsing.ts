@@ -188,7 +188,7 @@ export function templateDataParsing(templateInfoDTO) {
 
   // 初始化飞行阶段数据
   flightPhaseList.forEach((item) => {
-    const flightPhaseData = templateInfoDTO.mainTemplateMap[item] // 获取飞行阶段数据
+    const flightPhaseData = templateInfoDTO.mainTemplateMap?.[item] || [] // 获取飞行阶段数据
     // 过滤飞行阶段数据中的checkName等于"驾驶舱整肃性"和"检查单"的数据
     const checkItemData = flightPhaseData.filter(item => item.checkName !== '驾驶舱整肃性' && item.checkName !== '检查单')
     const cockpitIntegrity = flightPhaseData.filter(item => item.checkName === '驾驶舱整肃性')
