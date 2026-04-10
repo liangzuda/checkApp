@@ -68,23 +68,22 @@ function itemListFormatting(items, cockpitIntegrity, checkListExecution) {
   items?.forEach((item) => {
     const checkMainId = item.id // 大项id
     const itemList = []
-    let isContentful = false
+
     item.details?.forEach((detail) => {
       const id = detail.id // 子项id
       const none = detail.status === 2 ? 'Y' : 'N'
       const marker = detail.remarks?.map(remark => remark.content)?.join('\n') // 检查子项绑定备注
       const refList = refListFormatting(detail.referenceItem)
       if (none === 'Y' || refList?.length > 0 || marker?.length > 0) {
-        isContentful = true
+        itemList.push({
+          id,
+          none,
+          marker,
+          refList,
+        })
       }
-      itemList.push({
-        id,
-        none,
-        marker,
-        refList,
-      })
     })
-    if (isContentful) {
+    if (itemList.length > 0) {
       resultList.push({
         checkMainId,
         itemList,
