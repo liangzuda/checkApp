@@ -46,7 +46,7 @@ const defaultData = {
   account: localStorage.getItem('defaultAccount') || '', // 上传账号
   updateTime: '', // 更新时间
   flightInfo: {
-    flightTimeText: '', // 航班时间
+    flightTimeText: `${dayjs().utc().format('YYYY-MM-DD')}`, // 航班时间
     flightNo: '', // 航班号
     aircraft: '', // 飞机号
     depAirport: '', // 起飞机场
@@ -130,11 +130,11 @@ const flightInfoForm = reactive(tempData.flightInfo)
 const showTimePicker = ref(false) // 时间选择器显示
 const activeTabTimePicker = ref(0) // 选择器tab切换
 // 默认值回显
-flightInfoForm.flightTimeText = `${dayjs().utc().format('YYYY-MM-DD')}`
-const currentDate = ref([dayjs().utc().format('YYYY'), dayjs().utc().format('MM'), dayjs().utc().format('DD')]) // 日期
+const currentDate = ref(flightInfoForm.flightTimeText?.split('-') || [2026, 1, 1]) // 日期
 
 // 航班时间选择
 function onTimeConfirm() {
+  // console.log('选择的时间', currentDate.value)
   // flightInfoForm.flightTimeText = `${dayjs(`${currentDate.value.join('-')} ${currentTime.value.join(':')}`).format('YYYY-MM-DD HH:mm:ss')}Z`
   flightInfoForm.flightTimeText = `${dayjs(`${currentDate.value.join('-')}`).format('YYYY-MM-DD')}`
   showTimePicker.value = false
@@ -147,7 +147,7 @@ const currentField = ref<'aircraft' | 'dep' | 'arr'>('aircraft') // 当前输入
 const currentFieldCn = ref<'飞机号' | '起飞机场' | '到达机场'>('飞机号') // 当前输入字段中文
 
 const airportOption = airportList.map(item => ({
-  label: item.aptIcao,
+  label: `${item.aptIcao}/${item.aptIata}/${item.aptNameCn}/${item.aptNameFs}`,
   value: item.aptIcao,
 }))
 
@@ -505,6 +505,9 @@ const remarkTitle = ref('备注')
 
 function handleOpenRemark(subItem?) {
   // console.log('subItem', subItem)
+  // 每次打开清空输入框
+  tempRemark.value = ''
+
   if (subItem) {
     remarkList.value = subItem.remarks
     remarkTitle.value = subItem.content
@@ -759,7 +762,8 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
               </div>
             </div>
             <div
-              class="pop-button emphasis-style" :class="checkListExecutionData.checkList?.length ? '' : 'opacity-50'"
+              class="pop-button emphasis-style"
+              :class="checkListExecutionData.checkList?.length ? '' : 'disabled-style'"
               @click="handleOpenCheckListExecution"
             >
               检查单执行
@@ -768,7 +772,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
               </div>
             </div>
             <div
-              class="pop-button weaken-style" :class="cockpitIntegrityData.checkList?.length ? '' : 'opacity-50'"
+              class="pop-button weaken-style" :class="cockpitIntegrityData.checkList?.length ? '' : 'disabled-style'"
               @click="handleOpenCockpitIntegrity"
             >
               驾驶舱整肃性
@@ -900,9 +904,9 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
           {{ remarkTitle }}
         </div>
         <div class="flex gap-4 items-center">
-          <van-button v-show="!onlyRead" size="small" color="#70b603" @click="handleSaveRemark">
+          <!-- <van-button v-show="!onlyRead" size="small" color="#70b603" @click="handleSaveRemark">
             保存
-          </van-button>
+          </van-button> -->
           <van-button size="small" @click="handleCancelRemark">
             取消
           </van-button>
@@ -916,16 +920,22 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
             ref="remarkInput" v-model="tempRemark" rows="2" autosize type="textarea" maxlength="200"
             placeholder="请输入备注" show-word-limit
           />
-          <div class="quick-identifier">
-            <div class="queick-item" @click="handleAddQuickIdentifier('X')">
-              X
+          <div class="px-4px pt-8px flex items-center justify-between">
+            <div class="quick-identifier">
+              <div class="queick-item" @click="handleAddQuickIdentifier('X')">
+                X
+              </div>
+              <div class="queick-item" @click="handleAddQuickIdentifier('√')">
+                √
+              </div>
+              <div class="queick-item" @click="handleAddQuickIdentifier('+')">
+                +
+              </div>
             </div>
-            <div class="queick-item" @click="handleAddQuickIdentifier('√')">
-              √
-            </div>
-            <div class="queick-item" @click="handleAddQuickIdentifier('+')">
-              +
-            </div>
+
+            <van-button v-show="!onlyRead" size="small" color="#70b603" @click="handleSaveRemark">
+              保存
+            </van-button>
           </div>
         </div>
         <!-- 空白提示 -->
@@ -1184,17 +1194,17 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
 
     <!-- 同步 弹出框 -->
     <van-popup v-model:show="showSync" position="bottom" safe-area-inset-bottom round>
-      <div class="p-4 bg-[#fff] flex items-center justify-between">
+      <div class="px-4 py-2 bg-[#fff] flex items-center justify-between">
         <div>
           同步
         </div>
         <div class="flex gap-2 items-center">
-          <van-button :loading="syncLoading" size="small" color="#409eff" @click="handleSyncCheckList">
+          <van-button :loading="syncLoading" size="normal" color="#409eff" @click="handleSyncCheckList">
             确定
           </van-button>
-          <van-button size="small" @click="showSync = false">
+          <!-- <van-button size="small" @click="showSync = false">
             取消
-          </van-button>
+          </van-button> -->
         </div>
       </div>
       <div class="p-2 bg-[#fcfcfc]">
@@ -1269,7 +1279,10 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
     </van-popup>
 
     <!-- 航班时间 弹出框 -->
-    <van-popup v-model:show="showTimePicker" position="bottom" safe-area-inset-bottom round>
+    <van-popup
+      v-model:show="showTimePicker" position="bottom" :close-on-click-overlay="false" safe-area-inset-bottom
+      round
+    >
       <van-picker-group
         v-model:active-tab="activeTabTimePicker" title="航班日期" :tabs="[
           '选择日期',
@@ -1403,7 +1416,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
       display: flex;
       align-items: center;
       gap: 10px;
-      padding-top: 8px;
+      // padding-top: 8px;
 
       .queick-item {
         width: 40px;
@@ -1468,13 +1481,17 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
       }
 
       .weaken-style {
-        color: #5cc2ff;
-        background-color: #ecf5ff;
-        border: 1px solid #b3d8ff;
+        color: #4fa3e6;
+        /* 深一点的蓝色，比原来的 #5cc2ff 略深 */
+        background-color: #cbe4ff;
+        /* 更加深的背景色，比原来的 #ecf5ff 略深 */
+        border: 1px solid #a3c8ff;
+        /* 边框颜色与背景色相近 */
       }
 
       .weaken-style:active {
-        background-color: #41b6f9;
+        background-color: #3a99e6;
+        /* 活动状态的背景色更接近于 .emphasis-style */
         color: #fff;
       }
 
@@ -1487,6 +1504,27 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
       .emphasis-style:active {
         background-color: #66b1ff;
         color: #fff;
+      }
+
+      /* 不可用状态 */
+      .disabled-style {
+        color: #b0c7e2;
+        /* 浅灰蓝色 */
+        background-color: #f4f8fc;
+        /* 淡蓝色背景 */
+        border: 1px solid #d1e3f8;
+        /* 灰色边框 */
+        cursor: not-allowed;
+        /* 提示不可交互 */
+      }
+
+      .disabled-style:active {
+        background-color: #f4f8fc;
+        /* 保持背景色不变 */
+        color: #b0c7e2;
+        /* 保持文字颜色 */
+        border: 1px solid #d1e3f8;
+        /* 保持边框 */
       }
     }
   }
