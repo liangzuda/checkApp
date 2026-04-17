@@ -203,7 +203,7 @@ export function uploadTemplateFormatting(data: any) {
     acrNum: aircraft,
     depApt: depAirport,
     arrApt: arrAirport,
-    userNo: account,
+    observer: account,
     freeMarkerList: freeMarkerListFormatting(mainRemarkInitData),
     dataOfPhase: dataOfPhaseFormatting(flightPhaseCheckItemData),
   }

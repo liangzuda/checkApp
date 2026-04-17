@@ -1221,12 +1221,9 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
           同步
         </div>
         <div class="flex gap-2 items-center">
-          <van-button :loading="syncLoading" size="normal" color="#409eff" @click="handleSyncCheckList">
-            确定
-          </van-button>
-          <!-- <van-button size="small" @click="showSync = false">
+          <van-button size="small" @click="showSync = false">
             取消
-          </van-button> -->
+          </van-button>
         </div>
       </div>
       <div class="p-2 bg-[#fcfcfc]">
@@ -1283,8 +1280,11 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
           </div>
         </div>
         <div>
-          <div class="font-size-14px p-2 bg-[#fff] shadow-[0_0_10px_rgba(0,0,0,0.1)]">
-            同步账号
+          <div class="font-size-14px p-2 bg-[#fff] flex shadow-[0_0_10px_rgba(0,0,0,0.1)] items-center justify-between">
+            <span>同步账号</span>
+            <van-button :loading="syncLoading" size="small" color="#409eff" @click="handleSyncCheckList">
+              确定
+            </van-button>
           </div>
           <!-- 账号信息 -->
           <div class="py-2 pr-2 bg-[#f2f2f2]">
@@ -1292,7 +1292,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
               <!-- 账号 -->
               <div class="flight-info-form-item">
                 <span class="label">账号：</span>
-                <van-field v-model="tempAccount" placeholder="请输入工号" inset type="digit" class="input" />
+                <van-field v-model="tempAccount" placeholder="请输入losa系统账号" inset class="input" />
               </div>
             </div>
           </div>
