@@ -220,8 +220,8 @@ watch([optionSearch, currentField], () => {
 })
 
 // 打开下拉选择
-function openDropdown() {
-  optionSearch.value = ''
+function openDropdown(searchWord?: string) {
+  optionSearch.value = searchWord || ''
   showDropdown.value = true
   resetList()
 }
@@ -236,13 +236,13 @@ function openAircraft() {
 function openDep() {
   currentField.value = 'dep'
   currentFieldCn.value = '起飞机场'
-  openDropdown()
+  openDropdown(flightInfoForm.depAirport)
 }
 // 到达机场popup选择
 function openArr() {
   currentField.value = 'arr'
   currentFieldCn.value = '到达机场'
-  openDropdown()
+  openDropdown(flightInfoForm.arrAirport)
 }
 
 // 选择,根据当前字段赋值
