@@ -3,7 +3,7 @@ import { computed, reactive, ref } from 'vue'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import { showDialog, showToast } from 'vant'
-import { flightPhaseCheckItemInitData, mainRemarkInitData } from './template'
+import { flightPhaseCheckItemInitData, mainRemarkInitData, mainRemarkTempInputData } from './template'
 import { acrNumList, airportList } from './options'
 import { useRoute, useRouter } from 'vue-router'
 import { uploadTemplateFormatting } from '@/utils/uploadTemplateFormatting'
@@ -53,7 +53,8 @@ const defaultData = {
     arrAirport: '', // 到达机场
   },
   flightPhaseCheckItemData: templateData || flightPhaseCheckItemInitData || [], // 阶段检查数据
-  mainRemarkInitData: deepClone(mainRemarkInitData), // 备注数据
+  mainRemarkInitData: deepClone(mainRemarkInitData), // 主备注数据
+  mainRemarkTempInputData: deepClone(mainRemarkTempInputData), // 主备注临时输入input
 }
 
 const tempData = reactive(
@@ -86,8 +87,7 @@ async function handleSyncCheckList() {
   tempData.updateTime = `${dayjs().utc().format('YYYY-MM-DD HH:mm:ss')}Z`
 
   const syncData = uploadTemplateFormatting(tempData)
-  // eslint-disable-next-line no-console
-  console.log('上传数据', syncData)
+  // console.log('上传数据', syncData)
 
   const localStorageIpSetting = localStorage.getItem('ipSetting') || '192.168.10.50:9201'
   try {
@@ -501,23 +501,30 @@ const remarkInput = ref(null)
 const remarkList = ref(null)
 const tempReferenceItem = ref(null)
 const tempRemark = ref('')
+const tempRemarkItemIntroduce = ref(null) // 新增需求，缓存备注输入信息，因为取消函数没办法传入subItem，只能在open时引入当前编辑的obj
 const remarkTitle = ref('备注')
 
 function handleOpenRemark(subItem?) {
-  // console.log('subItem', subItem)
-  // 每次打开清空输入框
-  tempRemark.value = ''
-
   if (subItem) {
     remarkList.value = subItem.remarks
     remarkTitle.value = subItem.content
     tempReferenceItem.value = subItem.referenceItem
+
+    tempRemarkItemIntroduce.value = subItem.remarkTempInput
+    // 每次打开, 赋值缓存的输入值
+    tempRemark.value = deepClone(subItem.remarkTempInput).text
   }
   else {
     remarkList.value = tempData.mainRemarkInitData
     remarkTitle.value = 'MARKER'
     tempReferenceItem.value = null
+
+    tempRemarkItemIntroduce.value = tempData.mainRemarkTempInputData
+    // 每次打开, 赋值缓存的输入值
+    tempRemark.value = deepClone(tempData.mainRemarkTempInputData).text
   }
+
+  // console.log('tempRemarkItemIntroduce', tempRemarkItemIntroduce)
 
   showRemark.value = true
 
@@ -526,7 +533,13 @@ function handleOpenRemark(subItem?) {
 
   // 获得输入框焦点
   setTimeout(() => {
-    remarkInput.value?.focus()
+    // remarkInput.value?.focus()
+    const el = remarkInput.value?.$el?.querySelector('textarea')
+    if (el) {
+      el.focus()
+      const len = el.value?.length || 0
+      el.setSelectionRange(len, len)
+    }
   }, 50)
 }
 
@@ -558,6 +571,10 @@ function handleSaveRemark() {
   tempReferenceItem.value = null
   tempRemark.value = ''
   remarkList.value = null
+
+  // 点击保存后，缓存的输入框输入值置空
+  tempRemarkItemIntroduce.value.text = ''
+  tempRemarkItemIntroduce.value = null
 }
 
 function handleRemoveRemark(item) {
@@ -581,9 +598,14 @@ function handleRemoveRemark(item) {
 }
 
 function handleCancelRemark() {
+  tempRemarkItemIntroduce.value.text = tempRemark.value
+
+  // 清理响应式变量
   showRemark.value = false
   tempReferenceItem.value = null
   remarkList.value = null
+  tempRemark.value = ''
+  tempRemarkItemIntroduce.value = null
 }
 
 const autoSave = debounce(() => {
@@ -897,7 +919,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
       @click.stop="() => handleOpenRemark()"
     />
     <!-- 备注 弹出框 -->
-    <van-popup v-model:show="showRemark" class="my-floating-panel" round>
+    <van-popup v-model:show="showRemark" class="my-floating-panel" round :before-close="handleCancelRemark">
       <!-- 弹出框顶部 -->
       <div class="px-4 py-2 b-t-1 b-[#bbb] b-solid bg-[#fff] flex max-h-[60vh] w-[90vw] items-center justify-between">
         <div class="font-size-12px w-[65%] text-nowrap text-ellipsis overflow-hidden" :title="remarkTitle">
@@ -974,7 +996,7 @@ watch(flightPhaseCheckItemData, autoSave, { deep: true })
         <!-- 展示区 -->
         <div class="flex flex-col gap-2 max-h-[40vh] overflow-y-auto">
           <div v-for="item, index in remarkList" :key="index">
-            <div class="font-size-14px p-2 rounded-[10px] bg-[#fff]">
+            <div class="font-size-14px p-2 rounded-[10px] bg-[#fff]" @click="handleAddQuickIdentifier(item.content)">
               <div class="flex items-center justify-between">
                 <div class="c-[#999]">
                   {{ dayjs(item.updateTime).utc().format('YYYY/MM/DD HH:mm:ss[Z]') }}

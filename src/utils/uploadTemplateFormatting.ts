@@ -192,8 +192,7 @@ function freeMarkerListFormatting(list) {
 }
 
 export function uploadTemplateFormatting(data: any) {
-  // eslint-disable-next-line no-console
-  console.log(data)
+  // console.log(data)
   const { id, account, templateId, flightInfo, mainRemarkInitData, flightPhaseCheckItemData } = data
   const { aircraft, arrAirport, depAirport, flightNo, flightTimeText } = flightInfo
   const syncData = {

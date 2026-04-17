@@ -209,7 +209,8 @@ export function templateDataParsing(templateInfoDTO) {
             content: subItem.itemName,
             status: 1, // 1:已执行 2:未执行  默认已执行
             updateTime: '',
-            remarks: [],
+            remarks: [], // 备注
+            remarkTempInput: { text: '' }, // 对象可以保存引入 // 备注临时输入值
             referenceItem: {
               inputs: conversionInputBox(subItem.fillBlankRefList || []),
               checkbox: {
