@@ -4,7 +4,7 @@ import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import { showDialog, showToast } from 'vant'
 import { flightPhaseCheckItemInitData, mainRemarkInitData, mainRemarkTempInputData } from './template'
-import { acrNumList, airportList } from './options'
+import { acrListLocal, airportListLocal } from './options'
 import { useRoute, useRouter } from 'vue-router'
 import { uploadTemplateFormatting } from '@/utils/uploadTemplateFormatting'
 import { uploadLosaTemplate } from '@/api/index'
@@ -146,15 +146,28 @@ const optionSearch = ref('') // 搜索内容
 const currentField = ref<'aircraft' | 'dep' | 'arr'>('aircraft') // 当前输入字段
 const currentFieldCn = ref<'飞机号' | '起飞机场' | '到达机场'>('飞机号') // 当前输入字段中文
 
-const airportOption = airportList.map(item => ({
-  label: `${item.aptIcao}/${item.aptIata}/${item.aptNameCn}/${item.aptNameFs}`,
-  value: item.aptIcao,
-}))
+const baseInfo = JSON.parse(localStorage.getItem('baseInfo') || '{}')
+const { acrList, airportList } = baseInfo
 
-const aircraftOption = acrNumList.map(item => ({
-  label: item,
-  value: item,
-}))
+const airportOption = airportList
+  ? airportList?.map(item => ({
+      label: `${item.aptIcao}/${item.aptIata}/${item.aptNameCn}/${item.aptNameFs}`,
+      value: item.aptIcao,
+    }))
+  : airportListLocal?.map(item => ({
+      label: `${item.aptIcao}/${item.aptIata}/${item.aptNameCn}/${item.aptNameFs}`,
+      value: item.aptIcao,
+    }))
+
+const aircraftOption = acrList
+  ? acrList.map(item => ({
+      label: `${item.acrNum} (${item.actType || '未知机型'})`,
+      value: item.acrNum,
+    }))
+  : acrListLocal.map(item => ({
+      label: `${item.acrNum} (${item.actType || '未知机型'})`,
+      value: item.acrNum,
+    }))
 
 const options = {
   // 飞机号

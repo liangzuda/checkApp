@@ -1,121 +1,494 @@
 // 各种下拉框数据
 // 飞机号
-export const acrNumList = [
-  'B304H',
-  'B6396',
-  'B20AJ',
-  'B32EC',
-  'B30EQ',
-  'B9957',
-  'B326J',
-  'B6395',
-  'B30EP',
-  'B32D9',
-  'B9978',
-  'B1681',
-  'B325L',
-  'B6670',
-  'B320Z',
-  'B1647',
-  'B324C',
-  'B324D',
-  'B32CJ',
-  'B1857',
-  'B1006',
-  'B327W',
-  'B6736',
-  'B8957',
-  'B6787',
-  'B209R',
-  'B6949',
-  'B8536',
-  'B321A',
-  'B8537',
-  'B1870',
-  'B6667',
-  'B6666',
-  'B8407',
-  'B1646',
-  'B8955',
-  'B32DF',
-  'B6921',
-  'B324V',
-  'B327D',
-  'B6735',
-  'B1001',
-  'B6788',
-  'B324U',
-  'B6948',
-  'B321C',
-  'B8956',
-  'B323D',
-  'B8458',
-  'B6717',
-  'B8459',
-  'B8457',
-  'B6618',
-  'B6963',
-  'B6572',
-  'B1808',
-  'B20D1',
-  'B6338',
-  'B8540',
-  'B8317',
-  'B1872',
-  'B6341',
-  'B8315',
-  'B7777',
-  'B323R',
-  'B30C9',
-  'B6381',
-  'B304G',
-  'B7779',
-  'B326H',
-  'B30FC',
-  'B7778',
-  'B32EH',
-  'B8236',
-  'B6768',
-  'B6861',
-  'B6619',
-  'B1871',
-  'B6962',
-  'B-652G',
-  'B20DT',
-  'B8538',
-  'B1645',
-  'B8539',
-  'B8036',
-  'B6901',
-  'B6602',
-  'B6966',
-  'B1115',
-  'B6668',
-  'B6860',
-  'B6640',
-  'B8888',
-  'B1005',
-  'B6922',
-  'B30CT',
-  'B1003',
-  'B8035',
-  'B1002',
-  'B8235',
-  'B-656E',
-  'B8408',
-  'B6340',
-  'B6965',
-  'B8587',
-  'B207N',
-  'B30FQ',
-  'B322E',
-  'B8068',
-  'B32EJ',
-  'B208A',
+export const acrListLocal = [
+  {
+    acrNum: 'B208A',
+    actType: 'B787-9',
+  },
+  {
+    acrNum: 'B207N',
+    actType: 'B787-9',
+  },
+  {
+    acrNum: 'B8538',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B324U',
+    actType: 'A321',
+  },
+  {
+    acrNum: 'B-656E',
+    actType: null,
+  },
+  {
+    acrNum: 'B8458',
+    actType: 'A320',
+  },
+  {
+    acrNum: 'B1808',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B6948',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B8235',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B8317',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B8036',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B6602',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B326J',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B1002',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B30CT',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B6666',
+    actType: 'A320',
+  },
+  {
+    acrNum: 'B6787',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B7777',
+    actType: 'A321',
+  },
+  {
+    acrNum: 'B6381',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B6861',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B6395',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B8035',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B6860',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B32CJ',
+    actType: 'A321-271NX',
+  },
+  {
+    acrNum: 'B8408',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B8236',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B1870',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B322E',
+    actType: 'A321-271NX',
+  },
+  {
+    acrNum: 'B6768',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B6618',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B324V',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B1647',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B8068',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B320Z',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B6572',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B324U',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B8315',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B32D9',
+    actType: 'A321-271NX',
+  },
+  {
+    acrNum: 'B8536',
+    actType: 'A321',
+  },
+  {
+    acrNum: 'B7779',
+    actType: 'A321',
+  },
+  {
+    acrNum: 'B8458',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B9957',
+    actType: 'A321',
+  },
+  {
+    acrNum: 'B8540',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B1872',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B321C',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B8537',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B6921',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B8956',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B6965',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B20D1',
+    actType: 'B787-9',
+  },
+  {
+    acrNum: 'B30FQ',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B20DT',
+    actType: 'B787-9',
+  },
+  {
+    acrNum: 'B327W',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B8407',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B1005',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B1003',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B6962',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B6901',
+    actType: 'A321',
+  },
+  {
+    acrNum: 'B1645',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B8957',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B32EH',
+    actType: 'A321-271NX',
+  },
+  {
+    acrNum: 'B6922',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B327D',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B6901',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B327D',
+    actType: 'A320',
+  },
+  {
+    acrNum: 'B323R',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B6667',
+    actType: null,
+  },
+  {
+    acrNum: 'B6963',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B8536',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B1857',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B32EJ',
+    actType: 'A321-271NX',
+  },
+  {
+    acrNum: 'B30EP',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B7778',
+    actType: null,
+  },
+  {
+    acrNum: 'B6736',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B6341',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B1681',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B6735',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B304H',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B8539',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B30EQ',
+    actType: 'A321-271NX',
+  },
+  {
+    acrNum: 'B6717',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B8587',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B8955',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B304G',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B6338',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B8888',
+    actType: null,
+  },
+  {
+    acrNum: 'B6396',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B209R',
+    actType: 'B787-9',
+  },
+  {
+    acrNum: 'B6949',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B6670',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B6640',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B9978',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B1006',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B-652G',
+    actType: null,
+  },
+  {
+    acrNum: 'B324D',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B6788',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B1646',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B1001',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B6666',
+    actType: null,
+  },
+  {
+    acrNum: 'B32EC',
+    actType: 'A321-271NX',
+  },
+  {
+    acrNum: 'B7777',
+    actType: null,
+  },
+  {
+    acrNum: 'B20AJ',
+    actType: null,
+  },
+  {
+    acrNum: 'B1115',
+    actType: 'B787-9',
+  },
+  {
+    acrNum: 'B325L',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B30C9',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B324C',
+    actType: 'A321-271NX',
+  },
+  {
+    acrNum: 'B1872',
+    actType: 'A321',
+  },
+  {
+    acrNum: 'B326H',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B30FC',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B8459',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B32DF',
+    actType: 'A321-271NX',
+  },
+  {
+    acrNum: 'B1871',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B6966',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B9957',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B8457',
+    actType: 'A321-200',
+  },
+  {
+    acrNum: 'B321A',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B6668',
+    actType: null,
+  },
+  {
+    acrNum: 'B6619',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B6340',
+    actType: 'A320-200',
+  },
+  {
+    acrNum: 'B323D',
+    actType: 'A320-200N',
+  },
+  {
+    acrNum: 'B7779',
+    actType: null,
+  },
 ]
 
 // 机场
-export const airportList = [
+export const airportListLocal = [
   {
     aptIata: 'VIE',
     aptIcao: 'LOWW',

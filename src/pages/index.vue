@@ -88,7 +88,7 @@ async function getLatestTemplate() {
   try {
     const response = await queryLosaTemplate(ipSetting.value || 'localhost:3000')
     const res = response.data
-    const { templateInfoDTO } = res.data
+    const { templateInfoDTO, baseInfo } = res.data
     // console.log('res', res)
     if (res.code === 200) {
       const jsonRenderData = templateDataParsing(templateInfoDTO)
@@ -99,6 +99,8 @@ async function getLatestTemplate() {
       }
       // 将模板数据存储到本地
       localStorage.setItem('checkListTemplate', JSON.stringify(checkListTemplate))
+      // 将飞机号和机场信息存储到本地
+      localStorage.setItem('baseInfo', JSON.stringify(baseInfo))
       showSuccessToast('获取成功')
     }
     else {

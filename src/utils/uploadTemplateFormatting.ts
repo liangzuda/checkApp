@@ -72,13 +72,13 @@ function itemListFormatting(items, cockpitIntegrity, checkListExecution) {
     item.details?.forEach((detail) => {
       const id = detail.id // 子项id
       const none = detail.status === 2 ? 'Y' : 'N'
-      const marker = detail.remarks?.map(remark => remark.content)?.join('\n') // 检查子项绑定备注
+      const markerList = detail.remarks?.map(remark => ({ marker: remark.content, operateTime: remark.updateTime })) // 检查子项绑定备注
       const refList = refListFormatting(detail.referenceItem)
-      if (none === 'Y' || refList?.length > 0 || marker?.length > 0) {
+      if (none === 'Y' || refList?.length > 0 || markerList?.length > 0) {
         itemList.push({
           id,
           none,
-          marker,
+          markerList,
           refList,
         })
       }
@@ -112,7 +112,7 @@ function itemListFormatting(items, cockpitIntegrity, checkListExecution) {
           {
             id: idByCockpitIntegrity,
             none: 'Y',
-            marker: '',
+            markerList: [],
             refList,
           },
         ],
@@ -129,7 +129,7 @@ function itemListFormatting(items, cockpitIntegrity, checkListExecution) {
     const { id, checked, children, childrenId } = check
     if (checked?.length > 0) {
       const none = 'Y'
-      const marker = ''
+      const markerList = []
       const refList = []
       checked.forEach((checkName) => {
         const idIndex = children.findIndex(child => child === checkName)
@@ -144,7 +144,7 @@ function itemListFormatting(items, cockpitIntegrity, checkListExecution) {
         itemList.push({
           id,
           none,
-          marker,
+          markerList,
           refList,
         })
       }
